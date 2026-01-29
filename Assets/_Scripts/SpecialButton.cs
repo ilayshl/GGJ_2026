@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-public class LightButton : MonoBehaviour
+public class SpecialButton : MonoBehaviour
 {
     [SerializeField] private Camera cam;
 
@@ -20,7 +20,7 @@ public class LightButton : MonoBehaviour
         
     }
 
-    public void LightPress()
+    public void ButtonPress()
     {
         //animation of light and sound and scene change 
     }
