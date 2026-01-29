@@ -595,7 +595,7 @@ PlayerSettings:
     PS4: DOTWEEN
     PS5: DOTWEEN
     QNX: DOTWEEN
-    Standalone: DOTWEEN;VOL_FX
+    Standalone: DOTWEEN;VOL_FX;MOREMOUNTAINS_NICEVIBRATIONS_INSTALLED
     VisionOS: DOTWEEN
     WebGL: DOTWEEN
     Windows Store Apps: DOTWEEN
