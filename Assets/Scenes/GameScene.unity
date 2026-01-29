@@ -645,7 +645,7 @@ GameObject:
   - component: {fileID: 1140775493}
   - component: {fileID: 1140775492}
   - component: {fileID: 1140775496}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: LightExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -795,15 +795,15 @@ RectTransform:
   m_GameObject: {fileID: 1212448618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.1140275, y: 1.0395887, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 544467100}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -609.65564, y: -263.36755}
-  m_SizeDelta: {x: 513.9844, y: 460.0636}
+  m_AnchoredPosition: {x: 30, y: -403}
+  m_SizeDelta: {x: 513.9844, y: 204.0358}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1212448620
 MonoBehaviour:
