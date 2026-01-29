@@ -1,19 +1,10 @@
 ﻿<Solution>
   <Project Path="MoreMountains.Tools.csproj" />
-  <Project Path="VolFx.csproj" />
   <Project Path="MoreMountains.Tools.Editor.csproj" />
-  <Project Path="VolFx.Editor.csproj" />
-  <Project Path="ScreenFx.csproj" />
-  <Project Path="ScreenFx.Samples.csproj" />
   <Project Path="Lofelt.NiceVibrations.Demo.csproj" />
-  <Project Path="Tools.Editor.csproj" />
   <Project Path="Assembly-CSharp-firstpass.csproj" />
   <Project Path="Lofelt.NiceVibrations.Editor.csproj" />
-  <Project Path="VolFx.Samples.csproj" />
-  <Project Path="Tools.Runtime.csproj" />
-  <Project Path="ScreenFx.Editor.csproj" />
   <Project Path="Lofelt.NiceVibrations.csproj" />
-  <Project Path="VolFx.Transitions.csproj" />
   <Project Path="Assembly-CSharp-Editor-firstpass.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
 </Solution>
