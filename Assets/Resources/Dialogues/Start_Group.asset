@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987db11c13f9a6d4e80c4317195add54, type: 3}
+  m_Name: Start_Group
+  m_EditorClassIdentifier: Assembly-CSharp::_Scripts.DialogueGroup
+  groupName: Start
+  description: Auto-generated group for 'Start' category
+  autoPopulateFromCategory: 1
+  dialogues:
+  - {fileID: 11400000, guid: 894e492e627db984a93fb3f76027cf05, type: 2}
+  - {fileID: 11400000, guid: 673b747bfc5884c4ca4ee354758e76b8, type: 2}
+  - {fileID: 11400000, guid: 78e2c7bd325237f4d9005ce0c533d7b1, type: 2}
+  - {fileID: 11400000, guid: 15d80812b15cc144b868f2c427dcf9e0, type: 2}
