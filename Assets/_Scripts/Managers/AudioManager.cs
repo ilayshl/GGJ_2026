@@ -24,6 +24,7 @@ public class AudioManager : MonoBehaviour
         case SoundType.SFX:
             instance.sound.volume = SettingsManager.SfxVolume;
             instance.sound.PlayOneShot(clip);
+            Debug.Log("SFX Played");
         return;
         case SoundType.Music:
             instance.music.volume = SettingsManager.MusicVolume;
@@ -33,6 +34,7 @@ public class AudioManager : MonoBehaviour
         return;
         case SoundType.Dialogue:
             instance.dialogue.volume = SettingsManager.DialogueVolume;
+            instance.dialogue.Stop();
             instance.dialogue.clip = clip;
             instance.dialogue.Play();
         return;    
