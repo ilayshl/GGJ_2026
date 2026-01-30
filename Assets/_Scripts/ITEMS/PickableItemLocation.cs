@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PickableItemLocation : MonoBehaviour
 {
+    [SerializeField] private bool isOn;
+    
     public Vector3 OriginalPosition
     
     { get; private set; }

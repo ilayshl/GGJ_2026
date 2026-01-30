@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class DragItem : MonoBehaviour
 {
+    [SerializeField] private ParticleSystem _particleSystem;
     [SerializeField] private Camera cam;
     private PickableItemLocation pickedObject;
     private Vector3 offset;
@@ -26,9 +27,8 @@ public class DragItem : MonoBehaviour
             if (hit.collider && hit.collider.CompareTag("Pick"))
             {
                 Debug.Log("picked item");
-               
+                
                 pickedObject= hit.collider.GetComponent<PickableItemLocation>();
-               
                 offset = pickedObject.transform.position - (Vector3)mouseWorldPos;
                 isHeld = true;
             }
@@ -37,11 +37,15 @@ public class DragItem : MonoBehaviour
         {
             isHeld = false;
                 pickedObject.ReturnToOrigin();
+                
         }
 
         if (isHeld)
         {
             pickedObject.transform.position = (Vector3)mouseWorldPos + offset;
+           
+          
+            
         }
     }
 }
