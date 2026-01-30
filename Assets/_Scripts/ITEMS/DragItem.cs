@@ -24,9 +24,9 @@ public class DragItem : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero);
             Debug.Log("casting ray");
 
-            if (hit.collider && hit.collider.CompareTag("Pick"))
+            if (hit.collider && hit.collider.TryGetComponent<PickableItemLocation>(out PickableItemLocation item))
             {
-                Debug.Log("picked item");
+                if(!item.isOn) return;
                 
                 pickedObject= hit.collider.GetComponent<PickableItemLocation>();
                 offset = pickedObject.transform.position - (Vector3)mouseWorldPos;
