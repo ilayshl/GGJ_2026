@@ -1523,8 +1523,8 @@ GameObject:
   m_Component:
   - component: {fileID: 952689188}
   - component: {fileID: 952689191}
-  - component: {fileID: 952689190}
   - component: {fileID: 952689189}
+  - component: {fileID: 952689192}
   m_Layer: 0
   m_Name: HairBrush
   m_TagString: Pick
@@ -1540,13 +1540,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952689187}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.3493286, w: 0.93700033}
+  m_LocalRotation: {x: -0, y: -0, z: 0.26087835, w: 0.9653717}
   m_LocalPosition: {x: -4.41, y: 2.13, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 140950122}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40.893}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30.244}
 --- !u!114 &952689189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1560,29 +1560,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickableItemLocation
   isOn: 0
---- !u!136 &952689190
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952689187}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.17
-  m_Height: 5.27
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &952689191
 SpriteRenderer:
   serializedVersion: 2
@@ -1642,6 +1619,43 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!70 &952689192
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952689187}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.040455602, y: -0.12741625}
+  m_Size: {x: 2.4209058, y: 5.5248346}
+  m_Direction: 0
 --- !u!1 &1077640972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,8 +2200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160922e106f03d14388c27be36ee8e31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragItem
-  cursorRegular: {fileID: 0}
-  cursorHold: {fileID: 0}
+  _fakeCursor: {fileID: 1408775066}
   cursorHotSpot: {x: 0, y: 0}
   cursorMode: 0
   cam: {fileID: 1319971251}
@@ -2312,9 +2325,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 134e2f9bb11cafc49b2ef22d39cbdbab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FakeCursor
-  defaultHand: {fileID: 0}
-  HoldHand: {fileID: 0}
-  BloodyHand: {fileID: 0}
+  defaultHand: {fileID: 8333718203790541270, guid: 96877821c592f8a439e75abd9239b5ee, type: 3}
+  HoldHand: {fileID: 3367416182154008454, guid: 07a4e3d0ae25add4abbd6a2d3cc63d13, type: 3}
+  BloodyHand: {fileID: -5610428612868781620, guid: fc93ae0323e532743b6aaec62c53a0b5, type: 3}
   cam: {fileID: 1319971251}
 --- !u!1 &1471484750
 GameObject:
