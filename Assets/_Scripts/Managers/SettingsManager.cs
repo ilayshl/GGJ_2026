@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class SettingsManager : MonoBehaviour
 {
-    public static float SfxVolume = 1;
-    public static float MusicVolume = 1;
-    public static float DialogueVolume = 1;
+    public static float SfxVolume {get; private set;} = 1;
+    public static float MusicVolume {get; private set;} = 1;
+    public static float DialogueVolume {get; private set;} = 1;
 
     private static SettingsManager instance;
 
@@ -18,22 +18,7 @@ public class SettingsManager : MonoBehaviour
         instance = this;
     }
 
-    public void ChangeSfxVolume(float value)
-    {
-        SetVolume(SoundType.SFX, value);
-    }
-
-    public void ChangeMusicVolume(float value)
-    {
-        SetVolume(SoundType.Music, value);
-    }
-
-    public void ChangeDialogueVolume(float value)
-    {
-        SetVolume(SoundType.Dialogue, value);
-    }
-
-    private void SetVolume(SoundType type, float value)
+    public static void SetVolume(SoundType type, float value)
     {
         switch (type)
         {
@@ -46,6 +31,21 @@ public class SettingsManager : MonoBehaviour
             case SoundType.Dialogue:
                 DialogueVolume = value;
                 return;
+        }
+    }
+    
+    public static float GetVolume(SoundType type)
+    {
+        switch (type)
+        {
+            case SoundType.SFX:
+                return SfxVolume;
+            case SoundType.Music:
+                return MusicVolume;
+            case SoundType.Dialogue:
+                return DialogueVolume;
+            default:
+            return 0;
         }
     }
 }
