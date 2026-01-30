@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 8df4af7caa5c40f40b123b8b46dc8081
+guid: 7eda9e4df183845429d075eb512117a9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2396796318972539848
-    second: RegularHand_0
-  - first:
-      213: 3655474395803975935
-    second: RegularHand_1
-  - first:
-      213: 2997556842565954608
-    second: RegularHand_2
+      213: 3353505788049594590
+    second: HairBrush_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -81,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,67 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RegularHand_0
+      name: HairBrush_0
       rect:
         serializedVersion: 2
-        x: 321
-        y: 138
-        width: 257
-        height: 764
+        x: 0
+        y: 0
+        width: 234
+        height: 527
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c37257ad81234120800000000000000
-      internalID: 2396796318972539848
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RegularHand_1
-      rect:
-        serializedVersion: 2
-        x: 827
-        y: 128
-        width: 257
-        height: 764
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ff08e6f689adab230800000000000000
-      internalID: 3655474395803975935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RegularHand_2
-      rect:
-        serializedVersion: 2
-        x: 1404
-        y: 130
-        width: 262
-        height: 813
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 03c6f2b0116799920800000000000000
-      internalID: 2997556842565954608
+      spriteID: ed899e02fbb0a8e20800000000000000
+      internalID: 3353505788049594590
       vertices: []
       indices: 
       edges: []
@@ -175,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6a8633a70004cf044ab563b62ecf464d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -183,15 +133,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":true,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
-      - key: SpriteEditor.SliceOnImport
-        value: True
+      entries: []
     nameFileIdTable:
-      RegularHand_0: 2396796318972539848
-      RegularHand_1: 3655474395803975935
-      RegularHand_2: 2997556842565954608
+      HairBrush_0: 3353505788049594590
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

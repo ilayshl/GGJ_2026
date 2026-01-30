@@ -9,7 +9,6 @@ public class DragItem : MonoBehaviour
     [SerializeField] private Texture2D cursorHold;
     public Vector2 cursorHotSpot = Vector2.zero;
     public CursorMode cursorMode = CursorMode.Auto;
-    [SerializeField] private ParticleSystem _particleSystem;
     [SerializeField] private Camera cam;
     private PickableItemLocation pickedObject;
     private Vector3 offset;
