@@ -2,7 +2,8 @@ Game starts:
 
 *black screen after player presses play and footsteps are heard*
 
-1. Esthetician
+1.start
+ Esthetician
 “It’s been a while. How have you been?”
 
   Client
@@ -16,7 +17,7 @@ Game starts:
 
 *screen black fades out and we can see the client on the bed*
 
-1. Brush:
+2. Brush:
 Esthetician
 “Alright, we’ll start with a gentle cleanse.”
 
@@ -37,7 +38,7 @@ Esthetician
   Esthetician
 “This should help you relax.”
 
-2. Sponge in water bowl (hover)
+3. Sponge in water bowl (hover)
 
   Esthetician
 “Let me know if the water’s too warm.”
@@ -54,7 +55,7 @@ Esthetician
   Esthetician
 “Makes sense. It’s good to keep routines.”
 
-3. Sponge drying her face
+4. Sponge drying her face
 
   Client
 “That’s not too warm...”
@@ -76,7 +77,7 @@ Esthetician
   Client
 “...Yeah.”
 
-4. Pimple popping
+5. Pimple popping
 
   Esthetician
 “This one might pinch.”
@@ -95,7 +96,7 @@ Esthetician
   Client
 “Thank you.”
 
-5. Brush hair
+6. Brush hair
 
   Esthetician
 “Tell me if I’m being too rough.”
@@ -117,7 +118,7 @@ Esthetician
   Client
 “…I try.”
 
-6.Gua-sha
+7.Gua-sha
 
   Esthetician
 “What did you mean earlier, when you said you’re used to it?”
@@ -132,7 +133,7 @@ Esthetician
 
   (Screen glitches and it’s back to normal.)
 
-7. Place the face mask
+8. Place the face mask
 
   Esthetician
 “This’ll sit for a few minutes.”
@@ -158,7 +159,7 @@ Esthetician
 
 
 
-8. Taking off the mask (Refined)
+9. Taking off the mask (Refined)
 
 Esthetician
 “Alright. I’ll remove the mask now.”

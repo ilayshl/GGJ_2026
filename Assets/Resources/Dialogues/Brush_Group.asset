@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987db11c13f9a6d4e80c4317195add54, type: 3}
+  m_Name: Brush_Group
+  m_EditorClassIdentifier: Assembly-CSharp::_Scripts.DialogueGroup
+  groupName: Brush
+  description: Auto-generated group for 'Brush' category
+  autoPopulateFromCategory: 1
+  dialogues:
+  - {fileID: 11400000, guid: ba51bf5dc842c8e4d9f86db726b750e5, type: 2}
+  - {fileID: 11400000, guid: 0f9b9a60e9d48ca4aa41a822a79e5be6, type: 2}
+  - {fileID: 11400000, guid: acd8f1f4fbb9a64408833014a8c56058, type: 2}
+  - {fileID: 11400000, guid: 4be0d8601f1c8554dacac9b2d064561f, type: 2}
+  - {fileID: 11400000, guid: 15c7abf6d1f7598408f110ccc9924de4, type: 2}
+  - {fileID: 11400000, guid: 7ad7ca6e72aa75945a7751ea7ecab65f, type: 2}
