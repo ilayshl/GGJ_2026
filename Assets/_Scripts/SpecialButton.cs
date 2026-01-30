@@ -9,8 +9,10 @@ public class SpecialButton : MonoBehaviour
 
     private void Update()
     {
+        
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
+            
             Vector2 mousePos = cam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
