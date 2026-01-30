@@ -341,7 +341,7 @@ public class DialogueManager : MonoBehaviour
             {
                 if (Time.time - _lastTypingSoundTime >= typingSoundInterval && !char.IsWhiteSpace(currentChar))
                 {
-                    AudioManager.Play(SoundType.SFX, dialogData.typingSoundEffect);
+                    AudioManager.Play(SoundType.Dialogue, dialogData.typingSoundEffect);
                     _lastTypingSoundTime = Time.time;
                 }
             }

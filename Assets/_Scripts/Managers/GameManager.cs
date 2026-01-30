@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,17 @@ public class GameManager : MonoBehaviour
             return;
         }
         instance = this;
+
+        SceneManager.LoadScene("DialogueScene", LoadSceneMode.Additive);
     }
 
+    void Start()
+    {
+        DialogueManager.Instance.EnqueueDialoguesByGroup("Start");
+    }
+
+    public static void StartDialogue(string name)
+    {
+        DialogueManager.Instance.EnqueueDialogue(name);
+    }
 }
