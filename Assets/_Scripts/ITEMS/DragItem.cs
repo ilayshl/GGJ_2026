@@ -1,5 +1,3 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -22,7 +20,6 @@ public class DragItem : MonoBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero);
-            Debug.Log("casting ray");
 
             if (hit.collider && hit.collider.TryGetComponent<PickableItemLocation>(out PickableItemLocation item))
             {
@@ -35,8 +32,11 @@ public class DragItem : MonoBehaviour
         }
         else if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
+            if(pickedObject != null)
+            {
             isHeld = false;
                 pickedObject.ReturnToOrigin();
+            }
                 
         }
 
