@@ -16,4 +16,4 @@ MonoBehaviour:
   description: Auto-generated group for 'Default' category
   autoPopulateFromCategory: 1
   dialogues:
-  - {fileID: 11400000, guid: 5213c005bc256ef419010705884e891e, type: 2}
+  - {fileID: 11400000, guid: 02fbaa0f37570e34a87bffce85166c1d, type: 2}
