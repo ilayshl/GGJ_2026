@@ -59,7 +59,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _OutlineThickness: 0.9999999
+    - _OutlineThickness: 0.76
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ZWrite: 0
