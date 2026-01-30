@@ -6,20 +6,9 @@ using UnityEngine.UIElements;
 
 namespace _Scripts.Editor
 {
-    [System.Serializable]
-    public class DialogItem
-    {
-        public string title = "New Dialog";
-        public int sortingNumber = 0;
-        public string dialogText = "";
-        public string characterName = "";
-        public float displayDuration = 3f;
-        public bool isImportant = false;
-    }
-
     public class DialogEditor : EditorWindow
     {
-        private List<DialogItem> dialogItems = new List<DialogItem>();
+        private List<DialogData> dialogItems = new List<DialogData>();
         private ListView dialogListView;
         private VisualElement rightPane;
         private int selectedDialogIndex = -1;
@@ -53,6 +42,7 @@ namespace _Scripts.Editor
 
             splitWindow.StretchToParentSize();
 
+            LoadAllDialogs();
             RefreshDialogList();
         }
 
@@ -70,8 +60,13 @@ namespace _Scripts.Editor
             titleLabel.style.marginBottom = 10;
             leftPane.Add(titleLabel);
 
+            // Refresh button
+            var refreshButton = new Button(() => { LoadAllDialogs(); RefreshDialogList(); }) { text = "Refresh List" };
+            refreshButton.style.marginBottom = 5;
+            leftPane.Add(refreshButton);
+
             // Add button
-            var addButton = new Button(() => AddNewDialog()) { text = "Add Dialog" };
+            var addButton = new Button(() => CreateNewDialog()) { text = "Create New Dialog" };
             addButton.style.marginBottom = 10;
             leftPane.Add(addButton);
 
@@ -83,7 +78,7 @@ namespace _Scripts.Editor
             leftPane.Add(dialogListView);
 
             // Remove button
-            var removeButton = new Button(() => RemoveSelectedDialog()) { text = "Remove Selected" };
+            var removeButton = new Button(() => DeleteSelectedDialog()) { text = "Delete Selected" };
             removeButton.style.marginTop = 10;
             leftPane.Add(removeButton);
         }
@@ -104,6 +99,24 @@ namespace _Scripts.Editor
             var noSelectionLabel = new Label("Select a dialog from the list to edit its properties.");
             noSelectionLabel.name = "no-selection-label";
             rightPane.Add(noSelectionLabel);
+        }
+
+        private void LoadAllDialogs()
+        {
+            dialogItems.Clear();
+            string[] guids = AssetDatabase.FindAssets("t:DialogData");
+            
+            foreach (string guid in guids)
+            {
+                string path = AssetDatabase.GUIDToAssetPath(guid);
+                DialogData dialog = AssetDatabase.LoadAssetAtPath<DialogData>(path);
+                if (dialog != null)
+                {
+                    dialogItems.Add(dialog);
+                }
+            }
+
+            Debug.Log($"Loaded {dialogItems.Count} dialog(s) from project.");
         }
 
         private void RefreshDialogList()
@@ -152,14 +165,14 @@ namespace _Scripts.Editor
         private void OnDialogSelected(IEnumerable<object> selectedItems)
         {
             var selectedList = selectedItems.ToArray();
-            if (selectedList.Length > 0 && selectedList[0] is DialogItem selectedDialog)
+            if (selectedList.Length > 0 && selectedList[0] is DialogData selectedDialog)
             {
                 selectedDialogIndex = dialogItems.IndexOf(selectedDialog);
                 ShowDialogEditor(selectedDialog);
             }
         }
 
-        private void ShowDialogEditor(DialogItem dialog)
+        private void ShowDialogEditor(DialogData dialog)
         {
             rightPane.Clear();
 
@@ -169,12 +182,20 @@ namespace _Scripts.Editor
             titleLabel.style.marginBottom = 20;
             rightPane.Add(titleLabel);
 
+            // Show asset name
+            var assetNameLabel = new Label($"Asset: {dialog.name}");
+            assetNameLabel.style.color = Color.green;
+            assetNameLabel.style.marginBottom = 10;
+            rightPane.Add(assetNameLabel);
+
             // Title field
             var titleField = new TextField("Title:");
             titleField.value = dialog.title;
             titleField.RegisterValueChangedCallback(evt =>
             {
+                Undo.RecordObject(dialog, "Change Dialog Title");
                 dialog.title = evt.newValue;
+                EditorUtility.SetDirty(dialog);
                 RefreshDialogList();
             });
             rightPane.Add(titleField);
@@ -184,7 +205,9 @@ namespace _Scripts.Editor
             sortingField.value = dialog.sortingNumber;
             sortingField.RegisterValueChangedCallback(evt =>
             {
+                Undo.RecordObject(dialog, "Change Sorting Number");
                 dialog.sortingNumber = evt.newValue;
+                EditorUtility.SetDirty(dialog);
                 RefreshDialogList();
             });
             rightPane.Add(sortingField);
@@ -192,7 +215,12 @@ namespace _Scripts.Editor
             // Character name field
             var characterField = new TextField("Character Name:");
             characterField.value = dialog.characterName;
-            characterField.RegisterValueChangedCallback(evt => dialog.characterName = evt.newValue);
+            characterField.RegisterValueChangedCallback(evt =>
+            {
+                Undo.RecordObject(dialog, "Change Character Name");
+                dialog.characterName = evt.newValue;
+                EditorUtility.SetDirty(dialog);
+            });
             rightPane.Add(characterField);
 
             // Dialog text field (multiline)
@@ -200,20 +228,25 @@ namespace _Scripts.Editor
             textField.multiline = true;
             textField.style.height = 100;
             textField.value = dialog.dialogText;
-            textField.RegisterValueChangedCallback(evt => dialog.dialogText = evt.newValue);
+            textField.RegisterValueChangedCallback(evt =>
+            {
+                Undo.RecordObject(dialog, "Change Dialog Text");
+                dialog.dialogText = evt.newValue;
+                EditorUtility.SetDirty(dialog);
+            });
             rightPane.Add(textField);
 
             // Display duration field
             var durationField = new FloatField("Display Duration (seconds):");
             durationField.value = dialog.displayDuration;
-            durationField.RegisterValueChangedCallback(evt => dialog.displayDuration = evt.newValue);
+            durationField.RegisterValueChangedCallback(evt =>
+            {
+                Undo.RecordObject(dialog, "Change Display Duration");
+                dialog.displayDuration = evt.newValue;
+                EditorUtility.SetDirty(dialog);
+            });
             rightPane.Add(durationField);
-
-            // Important toggle
-            var importantToggle = new Toggle("Important Dialog:");
-            importantToggle.value = dialog.isImportant;
-            importantToggle.RegisterValueChangedCallback(evt => dialog.isImportant = evt.newValue);
-            rightPane.Add(importantToggle);
+            
 
             // Add some spacing
             var spacer = new VisualElement();
@@ -221,45 +254,84 @@ namespace _Scripts.Editor
             rightPane.Add(spacer);
 
             // Save button
-            var saveButton = new Button(() => SaveDialogs()) { text = "Save All Dialogs" };
+            var saveButton = new Button(() => SaveDialog(dialog)) { text = "Save Changes" };
             rightPane.Add(saveButton);
+
+            // Select in Project button
+            var selectButton = new Button(() => Selection.activeObject = dialog) { text = "Select in Project" };
+            rightPane.Add(selectButton);
         }
 
-        private void AddNewDialog()
+        private void CreateNewDialog()
         {
-            var newDialog = new DialogItem();
+            DialogData newDialog = ScriptableObject.CreateInstance<DialogData>();
             newDialog.sortingNumber = dialogItems.Count;
-            dialogItems.Add(newDialog);
-            RefreshDialogList();
-        }
-
-        private void RemoveSelectedDialog()
-        {
-            if (selectedDialogIndex >= 0 && selectedDialogIndex < dialogItems.Count)
+            
+            string path = EditorUtility.SaveFilePanelInProject(
+                "Create New Dialog",
+                "NewDialog",
+                "asset",
+                "Please enter a file name for the new dialog"
+            );
+            
+            if (!string.IsNullOrEmpty(path))
             {
-                dialogItems.RemoveAt(selectedDialogIndex);
-                selectedDialogIndex = -1;
-
-                // Clear right pane
-                rightPane.Clear();
-                var titleLabel = new Label("Dialog Properties");
-                titleLabel.style.fontSize = 16;
-                titleLabel.style.unityFontStyleAndWeight = FontStyle.Bold;
-                titleLabel.style.marginBottom = 10;
-                rightPane.Add(titleLabel);
-
-                var noSelectionLabel = new Label("Select a dialog from the list to edit its properties.");
-                rightPane.Add(noSelectionLabel);
-
+                AssetDatabase.CreateAsset(newDialog, path);
+                AssetDatabase.SaveAssets();
+                AssetDatabase.Refresh();
+                
+                LoadAllDialogs();
                 RefreshDialogList();
+                
+                Debug.Log($"Created new dialog at: {path}");
             }
         }
 
-
-        private void SaveDialogs()
+        private void DeleteSelectedDialog()
         {
-            //TODO save to ScriptableObject, JSON, or any other format you prefer
-            Debug.Log("Dialogs saved! (Implement your saving logic here)");
+            if (selectedDialogIndex >= 0 && selectedDialogIndex < dialogItems.Count)
+            {
+                var dialog = dialogItems[selectedDialogIndex];
+                
+                if (EditorUtility.DisplayDialog(
+                    "Delete Dialog",
+                    $"Are you sure you want to delete '{dialog.title}'? This action cannot be undone.",
+                    "Delete", "Cancel"))
+                {
+                    string path = AssetDatabase.GetAssetPath(dialog);
+                    AssetDatabase.DeleteAsset(path);
+                    AssetDatabase.SaveAssets();
+                    AssetDatabase.Refresh();
+                    
+                    selectedDialogIndex = -1;
+
+                    // Clear right pane
+                    rightPane.Clear();
+                    var titleLabel = new Label("Dialog Properties");
+                    titleLabel.style.fontSize = 16;
+                    titleLabel.style.unityFontStyleAndWeight = FontStyle.Bold;
+                    titleLabel.style.marginBottom = 10;
+                    rightPane.Add(titleLabel);
+
+                    var noSelectionLabel = new Label("Select a dialog from the list to edit its properties.");
+                    rightPane.Add(noSelectionLabel);
+
+                    LoadAllDialogs();
+                    RefreshDialogList();
+                    
+                    Debug.Log($"Deleted dialog: {path}");
+                }
+            }
+        }
+
+        private void SaveDialog(DialogData dialog)
+        {
+            EditorUtility.SetDirty(dialog);
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+            
+            Debug.Log($"Saved dialog: {dialog.name}");
+            EditorUtility.DisplayDialog("Dialog Saved", $"Successfully saved '{dialog.title}'", "OK");
         }
     }
 }
