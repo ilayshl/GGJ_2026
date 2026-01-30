@@ -550,9 +550,9 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -746,6 +746,9 @@ MonoBehaviour:
   sound: {fileID: 357337815}
   music: {fileID: 357337814}
   dialogue: {fileID: 357337813}
+  mainMusicLoop: {fileID: 8300000, guid: 3b31dccd509c447fc941ff91b1e1d862, type: 3}
+  scaryMusicLoop: {fileID: 8300000, guid: 921c1106c49544d19b000ff6e652ab5b, type: 3}
+  transitionSound: {fileID: 8300000, guid: 0402a40ea01d546a78911b723c08969b, type: 3}
 --- !u!1 &450755927
 GameObject:
   m_ObjectHideFlags: 0

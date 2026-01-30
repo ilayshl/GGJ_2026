@@ -46,7 +46,8 @@ public class SliderInteraction : MonoBehaviour, IPointerUpHandler
         SettingsManager.SetVolume(mixer, _currentValue);
         if(sound != null)
         {
-            AudioManager.Play(mixer, sound);
+            AudioManager.Play(SoundType.SFX, sound);
         }
+        AudioManager.UpdateVolume();
     }    
 }
