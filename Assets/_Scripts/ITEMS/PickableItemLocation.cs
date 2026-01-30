@@ -22,8 +22,9 @@ public class PickableItemLocation : MonoBehaviour
         transform.position = OriginalPosition;
     }
 
-    public void ToggleOutline()
+    public void TogglePickable()
     {
+        isOn = !isOn;
         _outline.gameObject.SetActive(!_outline.gameObject.activeSelf);
     }
 }

@@ -19,10 +19,10 @@ public class ItemsOrderManager : MonoBehaviour
 
     public void EnableItem()
     {
-        var currentItem = ItemsOrder.Peek();
+        var currentItem = ItemsOrder.Dequeue();
         if(currentItem.TryGetComponent<PickableItemLocation>(out var pickable))
         {
-            pickable.ToggleOutline();
+            pickable.TogglePickable();
         }
     }
 
