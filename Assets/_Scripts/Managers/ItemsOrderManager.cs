@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class ItemsOrderManager : MonoBehaviour
 {
-    public Queue<PickableItemLocation> ItemsOrder {get; private set; } = new();
+    public Queue<PickableItem> ItemsOrder {get; private set; } = new();
 
-    [SerializeField] PickableItemLocation[] itemsArray;
+    [SerializeField] PickableItem[] itemsArray;
 
     void Awake()
     {
@@ -20,7 +20,7 @@ public class ItemsOrderManager : MonoBehaviour
     public void EnableItem()
     {
         var currentItem = ItemsOrder.Dequeue();
-        if(currentItem.TryGetComponent<PickableItemLocation>(out var pickable))
+        if(currentItem.TryGetComponent<PickableItem>(out var pickable))
         {
             pickable.TogglePickable();
         }

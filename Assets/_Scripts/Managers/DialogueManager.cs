@@ -62,7 +62,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (_instance == null)
             {
-                _instance = FindObjectOfType<DialogueManager>();
+                _instance = FindFirstObjectByType<DialogueManager>();
             }
             return _instance;
         }

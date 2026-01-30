@@ -10,7 +10,7 @@ public class SliderInteraction : MonoBehaviour, IPointerUpHandler
     [SerializeField] private bool showDecimalPoints;
     [Space]
     [Header("Will fill by itself")]
-    [SerializeField] private TMP_Text text;
+    //[SerializeField] private TMP_Text text;
     [SerializeField] private Slider slider;
 
     private float _currentValue;
@@ -18,7 +18,7 @@ public class SliderInteraction : MonoBehaviour, IPointerUpHandler
     void Awake()
     {
         slider = GetComponent<Slider>();
-        text = GetComponentInChildren<TMP_Text>();
+        //text = GetComponentInChildren<TMP_Text>();
     }
 
     void Start()
@@ -32,11 +32,11 @@ public class SliderInteraction : MonoBehaviour, IPointerUpHandler
     {
         if(showDecimalPoints)
         {
-            text.SetText((value * 100).ToString("F2"));
+            //text.SetText((value * 100).ToString("F2"));
         }
         else
         {
-            text.SetText((value * 100).ToString("F0"));
+            //text.SetText((value * 100).ToString("F0"));
         }
         _currentValue = value;
     }

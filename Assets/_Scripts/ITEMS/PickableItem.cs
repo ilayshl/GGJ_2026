@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class PickableItemLocation : MonoBehaviour
+public class PickableItem : MonoBehaviour
 {
     public bool isOn;
+    public ItemType type;
 
     [SerializeField] private SpriteRenderer _outline;
     

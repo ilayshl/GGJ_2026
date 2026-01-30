@@ -8,7 +8,7 @@ public class DragItem : MonoBehaviour
     public Vector2 cursorHotSpot = Vector2.zero;
     public CursorMode cursorMode = CursorMode.Auto;
     [SerializeField] private Camera cam;
-    private PickableItemLocation pickedObject;
+    private PickableItem pickedObject;
     private Vector3 offset;
     private bool isHeld;
     
@@ -24,11 +24,11 @@ public class DragItem : MonoBehaviour
         {
             RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero);
 
-            if (hit.collider && hit.collider.TryGetComponent<PickableItemLocation>(out PickableItemLocation item))
+            if (hit.collider && hit.collider.TryGetComponent<PickableItem>(out PickableItem item))
             {
                 if(!item.isOn) return;
                 
-                pickedObject= hit.collider.GetComponent<PickableItemLocation>();
+                pickedObject= hit.collider.GetComponent<PickableItem>();
                 offset = pickedObject.transform.position - (Vector3)mouseWorldPos;
                 isHeld = true;
             }

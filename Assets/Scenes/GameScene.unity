@@ -147,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 60137531}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.89, y: 2.24, z: 0}
+  m_LocalPosition: {x: -4.42, y: 2.91, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickableItemLocation
   isOn: 0
+  type: 4
   _outline: {fileID: 85578425}
 --- !u!212 &60137534
 SpriteRenderer:
@@ -623,10 +624,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 950508656}
   - {fileID: 1471484751}
   - {fileID: 60137532}
   - {fileID: 172161692}
-  - {fileID: 950508656}
   - {fileID: 878178234}
   - {fileID: 245849367}
   m_Father: {fileID: 0}
@@ -644,12 +645,12 @@ GameObject:
   - component: {fileID: 172161693}
   - component: {fileID: 172161695}
   m_Layer: 0
-  m_Name: BowlOfWater
+  m_Name: Towel
   m_TagString: Pick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &172161692
 Transform:
   m_ObjectHideFlags: 0
@@ -659,7 +660,7 @@ Transform:
   m_GameObject: {fileID: 172161691}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.56, y: 0.7, z: 0}
+  m_LocalPosition: {x: -5.41, y: 1.83, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -774,6 +775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickableItemLocation
   isOn: 0
+  type: 2
   _outline: {fileID: 363086055}
 --- !u!1 &231521666
 GameObject:
@@ -1010,6 +1012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickableItemLocation
   isOn: 0
+  type: 3
   _outline: {fileID: 1235953811}
 --- !u!1 &297341150
 GameObject:
@@ -2160,6 +2163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickableItemLocation
   isOn: 0
+  type: 5
   _outline: {fileID: 521219129}
 --- !u!1 &950508655
 GameObject:
@@ -2305,6 +2309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickableItemLocation
   isOn: 0
+  type: 0
   _outline: {fileID: 363610236}
 --- !u!1 &1077640972
 GameObject:
@@ -2406,7 +2411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1140775495}
-  - component: {fileID: 1140775494}
+  - component: {fileID: 1140775497}
   - component: {fileID: 1140775493}
   - component: {fileID: 1140775492}
   - component: {fileID: 1140775496}
@@ -2455,52 +2460,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140775491}
   m_CullTransparentMesh: 1
---- !u!61 &1140775494
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140775491}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.1070137, y: -0.27871704}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 99.72527, y: 99.652405}
-  m_EdgeRadius: 0
 --- !u!224 &1140775495
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2529,10 +2488,67 @@ MonoBehaviour:
   m_GameObject: {fileID: 1140775491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43f56f31a116f6e4aa27f65006f3b261, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1140775492}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1140775497}
+        m_TargetAssemblyTypeName: LightButton, Assembly-CSharp
+        m_MethodName: OnPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1140775497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140775491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4bc2eda61074b63a83f7dd354d4c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LightButton
-  cam: {fileID: 1319971251}
+  CanActivate: 1
+  brokenLight: {fileID: 0}
 --- !u!1 &1212448618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2979,7 +2995,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160922e106f03d14388c27be36ee8e31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragItem
-  _particleSystem: {fileID: 0}
+  cursorRegular: {fileID: 0}
+  cursorHold: {fileID: 0}
+  cursorHotSpot: {x: 0, y: 0}
+  cursorMode: 0
   cam: {fileID: 1319971251}
 --- !u!114 &1319971255
 MonoBehaviour:
@@ -3141,6 +3160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickableItemLocation
   isOn: 0
+  type: 1
   _outline: {fileID: 89914763}
 --- !u!1 &1593471716
 GameObject:
@@ -3243,7 +3263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1697929172
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3283,7 +3303,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5568ccbe5ae89f94d9c4b51e2554edb9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76a57ad92e9d64676b4b448e13eecfab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3313,10 +3333,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f17c5168fabf40c89a29645804ddeb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FaceRenderer
-  normal: {fileID: 21300000, guid: 5568ccbe5ae89f94d9c4b51e2554edb9, type: 3}
+  normal: {fileID: 21300000, guid: 76a57ad92e9d64676b4b448e13eecfab, type: 3}
   soapy: {fileID: 21300000, guid: c38b6dc851e4f33469f0937962f622aa, type: 3}
   masked: {fileID: 21300000, guid: 5568ccbe5ae89f94d9c4b51e2554edb9, type: 3}
   bloody: {fileID: 21300000, guid: cb99bb00df0ec1c448d9bc62772f0ebc, type: 3}
+  bruised: {fileID: -1586527195254546623, guid: cfe702b621bc41449a4067a540334fae, type: 3}
   maskedHalfPulledBloody: {fileID: 0}
   maskedHalfPulledNormal: {fileID: 0}
 --- !u!1 &1780657173
