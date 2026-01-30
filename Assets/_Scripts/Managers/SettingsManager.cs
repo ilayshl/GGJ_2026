@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SettingsManager : MonoBehaviour
 {
-    public static float SfxVolume {get; private set;} = 1;
-    public static float MusicVolume {get; private set;} = 1;
-    public static float DialogueVolume {get; private set;} = 1;
+    public static float SfxVolume { get; private set; } = 1;
+    public static float MusicVolume { get; private set; } = 1;
+    public static float DialogueVolume { get; private set; } = 1;
+
+    [SerializeField] private Canvas settingsCanvasPrefab;
+    private Canvas _currentSettings;
 
     private static SettingsManager instance;
 
@@ -16,6 +20,22 @@ public class SettingsManager : MonoBehaviour
             return;
         }
         instance = this;
+
+        CreatePopup();
+    }
+
+    private void CreatePopup()
+    {
+        string settingsScene = "SettingsScene";
+        SceneManager.LoadSceneAsync(settingsScene, LoadSceneMode.Additive);
+        _currentSettings = Instantiate(settingsCanvasPrefab);
+        _currentSettings.gameObject.SetActive(false);
+        Scene activeSettingsScene = SceneManager.GetSceneByName(settingsScene);
+        SceneManager.MoveGameObjectToScene(_currentSettings.gameObject, activeSettingsScene);
+    }
+    public static void ToggleSettingsPopup()
+    {
+        instance._currentSettings.gameObject.SetActive(!instance._currentSettings.isActiveAndEnabled);
     }
 
     public static void SetVolume(SoundType type, float value)
@@ -33,7 +53,7 @@ public class SettingsManager : MonoBehaviour
                 return;
         }
     }
-    
+
     public static float GetVolume(SoundType type)
     {
         switch (type)
@@ -45,7 +65,7 @@ public class SettingsManager : MonoBehaviour
             case SoundType.Dialogue:
                 return DialogueVolume;
             default:
-            return 0;
+                return 0;
         }
     }
 }
