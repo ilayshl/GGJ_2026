@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SettingsManager : MonoBehaviour
 {
-    public static float SfxVolume = 1;
-    public static float MusicVolume = 1;
-    public static float DialogueVolume = 1;
+    public static float SfxVolume { get; private set; } = 1;
+    public static float MusicVolume { get; private set; } = 1;
+    public static float DialogueVolume { get; private set; } = 1;
+
+    [SerializeField] private Canvas settingsCanvasPrefab;
+    private Canvas _currentSettings;
 
     private static SettingsManager instance;
 
@@ -16,24 +20,25 @@ public class SettingsManager : MonoBehaviour
             return;
         }
         instance = this;
+
+        CreatePopup();
     }
 
-    public void ChangeSfxVolume(float value)
+    private void CreatePopup()
     {
-        SetVolume(SoundType.SFX, value);
+        string settingsScene = "SettingsScene";
+        SceneManager.LoadSceneAsync(settingsScene, LoadSceneMode.Additive);
+        _currentSettings = Instantiate(settingsCanvasPrefab);
+        _currentSettings.gameObject.SetActive(false);
+        Scene activeSettingsScene = SceneManager.GetSceneByName(settingsScene);
+        SceneManager.MoveGameObjectToScene(_currentSettings.gameObject, activeSettingsScene);
     }
-
-    public void ChangeMusicVolume(float value)
+    public static void ToggleSettingsPopup()
     {
-        SetVolume(SoundType.Music, value);
+        instance._currentSettings.gameObject.SetActive(!instance._currentSettings.isActiveAndEnabled);
     }
 
-    public void ChangeDialogueVolume(float value)
-    {
-        SetVolume(SoundType.Dialogue, value);
-    }
-
-    private void SetVolume(SoundType type, float value)
+    public static void SetVolume(SoundType type, float value)
     {
         switch (type)
         {
@@ -46,6 +51,21 @@ public class SettingsManager : MonoBehaviour
             case SoundType.Dialogue:
                 DialogueVolume = value;
                 return;
+        }
+    }
+
+    public static float GetVolume(SoundType type)
+    {
+        switch (type)
+        {
+            case SoundType.SFX:
+                return SfxVolume;
+            case SoundType.Music:
+                return MusicVolume;
+            case SoundType.Dialogue:
+                return DialogueVolume;
+            default:
+                return 0;
         }
     }
 }
