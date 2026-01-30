@@ -2056,6 +2056,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160922e106f03d14388c27be36ee8e31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragItem
+  cursorRegular: {fileID: 0}
+  cursorHold: {fileID: 0}
+  cursorHotSpot: {x: 0, y: 0}
+  cursorMode: 0
   _particleSystem: {fileID: 0}
   cam: {fileID: 1319971251}
 --- !u!114 &1319971255
