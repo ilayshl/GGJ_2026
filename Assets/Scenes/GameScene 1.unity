@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 68591884}
   - component: {fileID: 68591886}
   - component: {fileID: 68591885}
+  - component: {fileID: 68591887}
   m_Layer: 0
   m_Name: Towel
   m_TagString: Pick
@@ -147,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 68591882}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.45, y: 3.36, z: 0}
+  m_LocalPosition: {x: -5.35, y: -2.36, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -202,7 +203,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -7600872652282376241, guid: 09cc6f6767aa0c04580eb4114539de0e, type: 3}
+  m_Sprite: {fileID: 3749634709165931322, guid: 878ee52713f152642b54ff23edd90eee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -262,6 +263,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 4.5, y: 9.06}
   m_Direction: 0
+--- !u!114 &68591887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68591882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80daebdb1a60b4e4f9bc9583e42b9f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlipSprite
+  onTable: {fileID: 3749634709165931322, guid: 878ee52713f152642b54ff23edd90eee, type: 3}
+  Onhand: {fileID: -7600872652282376241, guid: 09cc6f6767aa0c04580eb4114539de0e, type: 3}
+  _drag: {fileID: 1319971254}
 --- !u!1 &83837684
 GameObject:
   m_ObjectHideFlags: 0
@@ -2348,6 +2364,7 @@ MonoBehaviour:
   cursorHotSpot: {x: 0, y: 0}
   cursorMode: 0
   cam: {fileID: 1319971251}
+  isHeld: 0
 --- !u!114 &1319971255
 MonoBehaviour:
   m_ObjectHideFlags: 0
