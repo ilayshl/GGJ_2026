@@ -348,7 +348,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 85578424}
-  - component: {fileID: 85578426}
   - component: {fileID: 85578425}
   m_Layer: 0
   m_Name: HairBrushOutline
@@ -431,42 +430,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!58 &85578426
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 85578423}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.12930362, y: 0.05152956}
-  m_Radius: 2.3263323
 --- !u!1 &89914760
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,7 +439,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 89914761}
-  - component: {fileID: 89914764}
   - component: {fileID: 89914763}
   m_Layer: 0
   m_Name: Sponge Outline
@@ -559,42 +521,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!58 &89914764
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89914760}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.12930362, y: 0.05152956}
-  m_Radius: 2.3263323
 --- !u!1 &140950121
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,7 +864,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.9599999, y: 9.339999}
+  m_Size: {x: 1.88, y: 10.87}
   m_Direction: 0
 --- !u!212 &245849369
 SpriteRenderer:
@@ -1318,7 +1244,6 @@ GameObject:
   m_Component:
   - component: {fileID: 363610233}
   - component: {fileID: 363610236}
-  - component: {fileID: 363610235}
   m_Layer: 0
   m_Name: BrushOutline
   m_TagString: Pick
@@ -1341,43 +1266,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 950508656}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 39.702}
---- !u!70 &363610235
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363610232}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.00000047683716, y: 0}
-  m_Size: {x: 2.1000009, y: 8.230001}
-  m_Direction: 0
 --- !u!212 &363610236
 SpriteRenderer:
   serializedVersion: 2
@@ -1522,7 +1410,6 @@ GameObject:
   m_Component:
   - component: {fileID: 521219126}
   - component: {fileID: 521219129}
-  - component: {fileID: 521219128}
   m_Layer: 0
   m_Name: GuashaOutline
   m_TagString: Pick
@@ -1545,42 +1432,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 878178234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -41.327}
---- !u!58 &521219128
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521219125}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.052200403, y: 0.13989748}
-  m_Radius: 1.7776964
 --- !u!212 &521219129
 SpriteRenderer:
   serializedVersion: 2
@@ -2257,7 +2108,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.052200403, y: 0.13989748}
-  m_Radius: 1.7776964
+  m_Radius: 2.13
 --- !u!114 &878178237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2285,7 +2136,6 @@ GameObject:
   - component: {fileID: 950508658}
   - component: {fileID: 950508657}
   - component: {fileID: 950508659}
-  - component: {fileID: 950508660}
   m_Layer: 0
   m_Name: Brush
   m_TagString: Pick
@@ -2302,7 +2152,7 @@ Transform:
   m_GameObject: {fileID: 950508655}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.5388442, w: 0.84240544}
-  m_LocalPosition: {x: -4.97, y: 3.9, z: 0}
+  m_LocalPosition: {x: -4.89, y: 3.9, z: 0}
   m_LocalScale: {x: 0.31, y: 0.31, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2420,28 +2270,6 @@ MonoBehaviour:
   isOn: 0
   type: 0
   _outline: {fileID: 363610236}
---- !u!95 &950508660
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 950508655}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 042e3931c9b254b72b2e419a3df11bf6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1077640972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2856,7 +2684,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1235953808}
   - component: {fileID: 1235953811}
-  - component: {fileID: 1235953810}
   m_Layer: 0
   m_Name: PimplePopperOutline
   m_TagString: Pick
@@ -2879,43 +2706,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 245849367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -415.888}
---- !u!70 &1235953810
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235953807}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.9599999, y: 9.339999}
-  m_Direction: 0
 --- !u!212 &1235953811
 SpriteRenderer:
   serializedVersion: 2

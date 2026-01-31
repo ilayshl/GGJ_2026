@@ -21,5 +21,18 @@ public class GameManager : MonoBehaviour
     public static void StartDialogue(string name)
     {
         DialogueManager.Instance.EnqueueDialoguesByGroup(name);
+        if(name == "Start")
+        {
+            DialogueManager.OnQueueComplete += instance.FadeInGameScene;
+        }
+    }
+
+    private void FadeInGameScene()
+    {
+        Debug.Log("Check");
+        SceneManager.LoadScene("GameScene", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("MainMenuScene");
+        DialogueManager.OnQueueComplete -= FadeInGameScene;
+        ScreenFade.Fade();
     }
 }

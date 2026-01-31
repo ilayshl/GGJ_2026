@@ -274,8 +274,7 @@ public class DialogueManager : MonoBehaviour
         }
         
         _isPlayingQueue = false;
-        
-        Debug.Log("Dialogue queue finished");
+        OnQueueComplete?.Invoke();
     }
     
     #endregion
