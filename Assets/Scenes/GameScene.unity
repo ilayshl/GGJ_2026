@@ -530,6 +530,7 @@ GameObject:
   - component: {fileID: 361904919}
   - component: {fileID: 361904921}
   - component: {fileID: 361904920}
+  - component: {fileID: 361904922}
   m_Layer: 5
   m_Name: PlantClinic
   m_TagString: Untagged
@@ -594,6 +595,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361904918}
   m_CullTransparentMesh: 1
+--- !u!114 &361904922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361904918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e63b47e1000c64e80fd0a165ceb40c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlantController
+  Plant1: {fileID: -2923702535043288740, guid: f2de7521e3bfae345a19786b67d90b02, type: 3}
+  Plant2: {fileID: -9017859140913542548, guid: 635afcc2087603048a00f7ec921d1c7b, type: 3}
+  Plant3: {fileID: -5714028698842266910, guid: b47f3c60c7c84fc449a4397e681137dc, type: 3}
+  sr: {fileID: 361904920}
 --- !u!1 &419916436
 GameObject:
   m_ObjectHideFlags: 0
@@ -2143,6 +2160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1875634747}
+  - component: {fileID: 1875634748}
   m_Layer: 0
   m_Name: Pimples
   m_TagString: Untagged
@@ -2169,6 +2187,18 @@ Transform:
   - {fileID: 297341152}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1875634748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875634746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e03d7c04a8e34092a71761cb280bd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &2142010877
 GameObject:
   m_ObjectHideFlags: 0

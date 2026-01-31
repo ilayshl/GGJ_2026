@@ -24,7 +24,7 @@ public class GlitchOn : MonoBehaviour
         glitchImage.SetActive(false);
     }
 
-    public void PlayGlitch(float duration = 0.3f)
+    public void PlayGlitch(float duration = 0.5f)
     {
         if (glitchRoutine != null)
             StopCoroutine(glitchRoutine);
