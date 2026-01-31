@@ -42,8 +42,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2860105915078883183}
   - component: {fileID: 982750219491435859}
-  - component: {fileID: 702423838780564181}
   - component: {fileID: 1625095075727016739}
+  - component: {fileID: 8756786719807837835}
   m_Layer: 0
   m_Name: TowelAnimated
   m_TagString: Pick
@@ -125,21 +125,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &702423838780564181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5385441965148349123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80daebdb1a60b4e4f9bc9583e42b9f46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FlipSprite
-  onTable: {fileID: 3749634709165931322, guid: 878ee52713f152642b54ff23edd90eee, type: 3}
-  Onhand: {fileID: -7600872652282376241, guid: 09cc6f6767aa0c04580eb4114539de0e, type: 3}
-  _drag: {fileID: 0}
 --- !u!95 &1625095075727016739
 Animator:
   serializedVersion: 7
@@ -162,3 +147,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8756786719807837835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5385441965148349123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532c49008373d401dac2756d92e9ac10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'

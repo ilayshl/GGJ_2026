@@ -16,7 +16,7 @@ MonoBehaviour:
   groupName: Pimple popping
   sortingNumber: 21
   characterName: Esthetician
-  dialogText: This one might pinch.
+  dialogText: This one might hurt a bit.
   displayDuration: 3
   typingSpeedOverride: -1
   dialogueVoiceLine: {fileID: 0}

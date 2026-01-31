@@ -34,7 +34,6 @@ public class SequenceManager : MonoBehaviour
 
     public void PlaySequence(DialogueGroup groupSequence)
     {
-        
         Debug.Log($"Playing sequence '{groupSequence.groupName}'");
         DialogueManager.Instance.PlayDialogueGroup(groupSequence);
     }

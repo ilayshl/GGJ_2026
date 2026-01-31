@@ -16,7 +16,7 @@ MonoBehaviour:
   groupName: Towel
   sortingNumber: 15
   characterName: Client
-  dialogText: "Oh\u2014thanks. My husband got them for me."
+  dialogText: Oh, thanks. My husband got them for me.
   displayDuration: 3
   typingSpeedOverride: -1
   dialogueVoiceLine: {fileID: 0}

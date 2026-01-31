@@ -576,7 +576,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2923702535043288740, guid: c1afc51ce1489644b90f055e80fa70b8, type: 3}
+  m_Sprite: {fileID: -2923702535043288740, guid: f2de7521e3bfae345a19786b67d90b02, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1746,7 +1746,7 @@ PrefabInstance:
     - target: {fileID: 729613740113533977, guid: 4b2b737571524c24fbb99813d6df9d0d, type: 3}
       propertyPath: _dialogueGroup
       value: 
-      objectReference: {fileID: 11400000, guid: 6cf3019a92d27254e9584c116fddd9e6, type: 2}
+      objectReference: {fileID: 11400000, guid: e52a93f63050c3643802a639088ff933, type: 2}
     - target: {fileID: 729613740113533977, guid: 4b2b737571524c24fbb99813d6df9d0d, type: 3}
       propertyPath: animationObject
       value: 
@@ -2238,6 +2238,10 @@ PrefabInstance:
       value: PimplePopper
       objectReference: {fileID: 0}
     - target: {fileID: 6510456255800993456, guid: a2925085359c8b1439f2df3929fe553b, type: 3}
+      propertyPath: _dialogueGroup
+      value: 
+      objectReference: {fileID: 11400000, guid: bd37cf0dd3f55894ea5b733314dc7680, type: 2}
+    - target: {fileID: 6510456255800993456, guid: a2925085359c8b1439f2df3929fe553b, type: 3}
       propertyPath: animationObject
       value: 
       objectReference: {fileID: 2869697349171011007, guid: 95a29a4146a9c4fc9ba66597fca4bbdd, type: 3}
@@ -2529,6 +2533,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guavasha
       objectReference: {fileID: 0}
+    - target: {fileID: 7053070208707234706, guid: 4907ad2073ace754aa913bb186f3ef70, type: 3}
+      propertyPath: animationObject
+      value: 
+      objectReference: {fileID: 3427803146649119936, guid: a1541ec670d6b4d32bb2873501750132, type: 3}
     - target: {fileID: 8572292551338911876, guid: 4907ad2073ace754aa913bb186f3ef70, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.56

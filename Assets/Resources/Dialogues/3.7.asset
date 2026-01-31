@@ -16,7 +16,7 @@ MonoBehaviour:
   groupName: Towel
   sortingNumber: 16
   characterName: Esthetician
-  dialogText: Oh, he has good taste.
+  dialogText: He has good taste.
   displayDuration: 3
   typingSpeedOverride: -1
   dialogueVoiceLine: {fileID: 0}

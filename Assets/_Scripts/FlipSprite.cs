@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class FlipSprite : MonoBehaviour
 {
+    public bool IsActive = true;
     [SerializeField] private Sprite onTable;
 
     [SerializeField] private Sprite Onhand;
@@ -18,6 +19,7 @@ public class FlipSprite : MonoBehaviour
 
     public void Update()
     {
+        if(!IsActive) return;
         if (_drag.isHeld && _drag.pickedObject == this)
         {
             sr.sprite = Onhand;

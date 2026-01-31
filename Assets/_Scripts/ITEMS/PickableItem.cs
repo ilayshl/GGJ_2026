@@ -1,4 +1,5 @@
 using _Scripts;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class PickableItem : MonoBehaviour
@@ -29,6 +30,10 @@ public class PickableItem : MonoBehaviour
             Instantiate(animationObject, Vector3.zero, Quaternion.identity);
             ItemsOrderManager.PlaySequence(_dialogueGroup);
             gameObject.SetActive(false);
+            if(TryGetComponent<FlipSprite>(out var flip))
+            {
+                flip.IsActive = false;
+            }
         }
         else
         {

@@ -16,7 +16,7 @@ MonoBehaviour:
   groupName: Towel
   sortingNumber: 9
   characterName: Esthetician
-  dialogText: "Let me know if the water\u2019s too warm."
+  dialogText: Let me know if it's too warm.
   displayDuration: 3
   typingSpeedOverride: -1
   dialogueVoiceLine: {fileID: 0}

@@ -16,7 +16,7 @@ MonoBehaviour:
   groupName: Start
   sortingNumber: 2
   characterName: Esthetician
-  dialogText: "Good. You should take time for yourself more often.\u201D\r"
+  dialogText: "Good. You should take time for yourself more often.\r"
   displayDuration: 3
   typingSpeedOverride: -1
   dialogueVoiceLine: {fileID: 0}

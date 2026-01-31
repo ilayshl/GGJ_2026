@@ -15,5 +15,4 @@ MonoBehaviour:
   groupName: Sponge in water bowl (hover)
   description: Auto-generated group for 'Sponge in water bowl (hover)' category
   autoPopulateFromCategory: 1
-  dialogues:
-  - {fileID: 11400000, guid: a03a7782cff92824fb1b77ed9b5e516f, type: 2}
+  dialogues: []
