@@ -1,17 +1,23 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class DragItem : MonoBehaviour
 {
-    [SerializeField] private Texture2D cursorRegular;
-    [SerializeField] private Texture2D cursorHold;
+    [SerializeField] private FakeCursor _fakeCursor;
     public Vector2 cursorHotSpot = Vector2.zero;
     public CursorMode cursorMode = CursorMode.Auto;
     [SerializeField] private Camera cam;
     private PickableItem pickedObject;
     private Vector3 offset;
     private bool isHeld;
-    
+
+    private void Start()
+    {
+        _fakeCursor.SetCursor(1);
+    }
+
     void Update()
     {
        
@@ -23,31 +29,35 @@ public class DragItem : MonoBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero);
-
-            if (hit.collider && hit.collider.TryGetComponent<PickableItem>(out PickableItem item))
+            Debug.Log("casting ray");
+            _fakeCursor.SetCursor(2);
+          
+            if (hit.collider && hit.collider.CompareTag("Pick"))
             {
-                if(!item.isOn) return;
+                Debug.Log("picked item");
                 
                 pickedObject= hit.collider.GetComponent<PickableItem>();
                 offset = pickedObject.transform.position - (Vector3)mouseWorldPos;
                 isHeld = true;
             }
+            
         }
         else if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
-            if(pickedObject != null)
-            {
             isHeld = false;
-                pickedObject.ReturnToOrigin();
+            if (pickedObject == null)
+            {
+                _fakeCursor.SetCursor(1);
+                return;
             }
+            pickedObject.ReturnToOrigin();
+            _fakeCursor.SetCursor(1);
                 
         }
 
         if (isHeld)
         {
             pickedObject.transform.position = (Vector3)mouseWorldPos + offset;
-           
-          
             
         }
     }
