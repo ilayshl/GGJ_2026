@@ -39,8 +39,21 @@ public class FakeCursor : MonoBehaviour
         transform.position = mouseWorld + (Vector3)(hotspotPixelOffset / sr.sprite.pixelsPerUnit);
     }
 
-    public void SetCursor()
+    public void SetCursor(int num)
     {
-        
+        switch (num)
+        {
+            case 1:
+                sr.sprite = defaultHand;
+                break;
+            case 2:
+                sr.sprite = HoldHand;
+                break;
+            case 3:
+                sr.sprite = BloodyHand;
+                break;
+                    
+        }
     }
+   
 }
