@@ -9,6 +9,14 @@ public class StartGame : MonoBehaviour
     [SerializeField] private Button Button;
     public void OnStartGame()
     {
-        SceneManager.LoadScene("GameScene");
+        ScreenFade.Fade();
+        ScreenFade.OnEnableFinish += StartDialogue;
     }
+
+    private void StartDialogue()
+    {
+        ScreenFade.OnEnableFinish -= StartDialogue;
+        GameManager.StartDialogue("Start");
+    }
+
 }

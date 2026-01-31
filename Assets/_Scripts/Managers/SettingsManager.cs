@@ -30,8 +30,10 @@ public class SettingsManager : MonoBehaviour
         SceneManager.LoadSceneAsync(settingsScene, LoadSceneMode.Additive);
         _currentSettings = Instantiate(settingsCanvasPrefab);
         _currentSettings.gameObject.SetActive(false);
+        _currentSettings.worldCamera = Camera.main;
         Scene activeSettingsScene = SceneManager.GetSceneByName(settingsScene);
         SceneManager.MoveGameObjectToScene(_currentSettings.gameObject, activeSettingsScene);
+
     }
     public static void ToggleSettingsPopup()
     {

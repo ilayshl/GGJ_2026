@@ -1,0 +1,29 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ItemsOrderManager : MonoBehaviour
+{
+    public Queue<PickableItem> ItemsOrder {get; private set; } = new();
+
+    [SerializeField] PickableItem[] itemsArray;
+
+    void Awake()
+    {
+        foreach(var item in itemsArray)
+        {
+            ItemsOrder.Enqueue(item);
+        }
+        EnableItem();
+    }
+
+
+    public void EnableItem()
+    {
+        var currentItem = ItemsOrder.Dequeue();
+        if(currentItem.TryGetComponent<PickableItem>(out var pickable))
+        {
+            pickable.TogglePickable();
+        }
+    }
+
+}

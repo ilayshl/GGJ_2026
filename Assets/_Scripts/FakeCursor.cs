@@ -46,10 +46,10 @@ public class FakeCursor : MonoBehaviour
             case 1:
                 sr.sprite = defaultHand;
                 break;
-                case 2:
+            case 2:
                 sr.sprite = HoldHand;
                 break;
-                case 3:
+            case 3:
                 sr.sprite = BloodyHand;
                 break;
                     

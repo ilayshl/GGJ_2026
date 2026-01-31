@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987db11c13f9a6d4e80c4317195add54, type: 3}
+  m_Name: Taking off the mask (Refined)_Group
+  m_EditorClassIdentifier: Assembly-CSharp::_Scripts.DialogueGroup
+  groupName: Taking off the mask (Refined)
+  description: Auto-generated group for 'Taking off the mask (Refined)' category
+  autoPopulateFromCategory: 1
+  dialogues:
+  - {fileID: 11400000, guid: f2412895b68e218469be5ca50dd81f1c, type: 2}
+  - {fileID: 11400000, guid: a524db746ae9d664490b025ad03119c2, type: 2}
+  - {fileID: 11400000, guid: c0d92c8024185394ca38a345df26b190, type: 2}
+  - {fileID: 11400000, guid: aaec2ff3191119d4abd68246fc5a32b7, type: 2}
+  - {fileID: 11400000, guid: 218cae41a0842744d9c853805eb19d5f, type: 2}
+  - {fileID: 11400000, guid: e4c22b3548c468449b3970216bdd8e1b, type: 2}
+  - {fileID: 11400000, guid: 3384e61341853634e8e02cfdbbbe9b90, type: 2}
+  - {fileID: 11400000, guid: 8331bd7ba158cf84bab58f44d8210ccc, type: 2}
+  - {fileID: 11400000, guid: 412d172c61e7a6347a260813c7eb9f1f, type: 2}
+  - {fileID: 11400000, guid: 21786de862acd29488da77d9b72c3e63, type: 2}
+  - {fileID: 11400000, guid: 53e045e293493f445b3ea55e89fed850, type: 2}
+  - {fileID: 11400000, guid: 5213c005bc256ef419010705884e891e, type: 2}
+  - {fileID: 11400000, guid: cedcee712f3809043a20820315cf9e04, type: 2}

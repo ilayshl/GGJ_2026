@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987db11c13f9a6d4e80c4317195add54, type: 3}
+  m_Name: Place the face mask_Group
+  m_EditorClassIdentifier: Assembly-CSharp::_Scripts.DialogueGroup
+  groupName: Place the face mask
+  description: Auto-generated group for 'Place the face mask' category
+  autoPopulateFromCategory: 1
+  dialogues:
+  - {fileID: 11400000, guid: 4c7d91c3ee479034795dc7ad670a1e60, type: 2}
+  - {fileID: 11400000, guid: 844e764a239f2b343ac639fc9590bcf0, type: 2}
+  - {fileID: 11400000, guid: 1241def060176894d9f1168d99f68147, type: 2}
+  - {fileID: 11400000, guid: 37c9ab2f98aa72e4e9fb7a141aac186d, type: 2}
+  - {fileID: 11400000, guid: b1f6651de10c0924789253b5ebd8fdb7, type: 2}
+  - {fileID: 11400000, guid: 752956758ecd22244a743ad7a797cdb9, type: 2}

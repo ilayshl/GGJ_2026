@@ -62,7 +62,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (_instance == null)
             {
-                _instance = FindObjectOfType<DialogueManager>();
+                _instance = FindFirstObjectByType<DialogueManager>();
             }
             return _instance;
         }
@@ -274,8 +274,7 @@ public class DialogueManager : MonoBehaviour
         }
         
         _isPlayingQueue = false;
-        
-        Debug.Log("Dialogue queue finished");
+        OnQueueComplete?.Invoke();
     }
     
     #endregion
@@ -341,7 +340,7 @@ public class DialogueManager : MonoBehaviour
             {
                 if (Time.time - _lastTypingSoundTime >= typingSoundInterval && !char.IsWhiteSpace(currentChar))
                 {
-                    AudioManager.Play(SoundType.SFX, dialogData.typingSoundEffect);
+                    AudioManager.Play(SoundType.Dialogue, dialogData.typingSoundEffect);
                     _lastTypingSoundTime = Time.time;
                 }
             }
