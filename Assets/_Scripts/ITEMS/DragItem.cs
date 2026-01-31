@@ -39,11 +39,14 @@ public class DragItem : MonoBehaviour
                 pickedObject= hit.collider.GetComponent<PickableItemLocation>();
                 offset = pickedObject.transform.position - (Vector3)mouseWorldPos;
                 isHeld = true;
+                
             }
             
         }
         else if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
+            SpriteRenderer sprite = pickedObject.GetComponent<SpriteRenderer>();
+            sprite.sortingOrder = 0;
             isHeld = false;
             if (pickedObject == null)
             {
@@ -57,7 +60,10 @@ public class DragItem : MonoBehaviour
 
         if (isHeld)
         {
+            SpriteRenderer sprite = pickedObject.GetComponent<SpriteRenderer>();
+            sprite.sortingOrder = 10;
             pickedObject.transform.position = (Vector3)mouseWorldPos + offset;
+            
             
         }
     }
