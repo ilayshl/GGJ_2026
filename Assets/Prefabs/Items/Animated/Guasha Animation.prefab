@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3912115463576689445}
   - component: {fileID: 6212197996800048401}
   - component: {fileID: 8828003621989873347}
+  - component: {fileID: 8242132411927222919}
   m_Layer: 0
   m_Name: Guasha Animated
   m_TagString: Pick
@@ -114,6 +115,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8242132411927222919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3288379975315398642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532c49008373d401dac2756d92e9ac10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TowelAnimation
 --- !u!1 &3427803146649119936
 GameObject:
   m_ObjectHideFlags: 0

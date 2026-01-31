@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 3690816179724466023}
   - component: {fileID: 4979640616719874974}
   - component: {fileID: 339998354948191181}
+  - component: {fileID: 7613827202482482943}
   m_Layer: 0
   m_Name: PopperAnimated
   m_TagString: Pick
@@ -146,3 +147,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7613827202482482943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4411394674166240296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532c49008373d401dac2756d92e9ac10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TowelAnimation

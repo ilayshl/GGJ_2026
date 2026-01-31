@@ -16,4 +16,9 @@ public class TowelAnimation : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public void DisablePimples()
+    {
+        FindFirstObjectByType<Pimples>().gameObject.SetActive(false);
+    }
 }
