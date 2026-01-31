@@ -14,8 +14,6 @@ public class GameManager : MonoBehaviour
             return;
         }
         instance = this;
-
-        SceneManager.LoadScene("DialogueScene", LoadSceneMode.Additive);
     }
 
     public static void StartDialogue(string name)
@@ -29,7 +27,6 @@ public class GameManager : MonoBehaviour
 
     private void FadeInGameScene()
     {
-        Debug.Log("Check");
         SceneManager.LoadScene("GameScene", LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("MainMenuScene");
         DialogueManager.OnQueueComplete -= FadeInGameScene;

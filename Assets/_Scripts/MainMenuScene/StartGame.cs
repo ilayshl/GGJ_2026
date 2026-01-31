@@ -15,8 +15,8 @@ public class StartGame : MonoBehaviour
 
     private void StartDialogue()
     {
-        GameManager.StartDialogue("Start");
         ScreenFade.OnEnableFinish -= StartDialogue;
+        GameManager.StartDialogue("Start");
     }
 
 }
