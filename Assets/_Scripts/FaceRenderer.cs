@@ -1,15 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FaceRenderer : MonoBehaviour
 {
     [SerializeField] private Sprite normal, soapy, masked, bloody, bruised;
     [SerializeField] private Sprite maskedHalfPulledBloody, maskedHalfPulledNormal;
 
-    private SpriteRenderer sr;
+    private Image sr;
 
     void Awake()
     {
-        sr = GetComponent<SpriteRenderer>();
+        sr = GetComponent<Image>();
     }
 
     public void SetNormal()

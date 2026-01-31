@@ -8,6 +8,7 @@ public class PickableItem : MonoBehaviour
 
     [SerializeField] private SpriteRenderer _outline;
     [SerializeField] private DialogueGroup _dialogueGroup;
+    [SerializeField] private GameObject animationObject;
     private bool _inCollider = false;
 
     public Vector3 OriginalPosition { get; private set; }
@@ -25,6 +26,8 @@ public class PickableItem : MonoBehaviour
     {
         if (_inCollider)
         {
+            Instantiate(animationObject);
+            gameObject.SetActive(false);
             SequenceManager.Instance.PlaySequence(_dialogueGroup, gameObject);
         }
         else

@@ -28,7 +28,7 @@ public class FakeCursor : MonoBehaviour
             -300
         );
         
-        GlitchOn.Instance.PlayGlitch(4f);
+        //GlitchOn.Instance.PlayGlitch(4f);
     }
 
 
