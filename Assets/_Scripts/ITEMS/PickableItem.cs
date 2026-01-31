@@ -7,14 +7,15 @@ public class PickableItem : MonoBehaviour
     public ItemType type;
 
     [SerializeField] private SpriteRenderer _outline;
+    [SerializeField] private DialogueGroup _dialogueGroup;
     private bool _inCollider = false;
-    
+
     public Vector3 OriginalPosition { get; private set; }
 
     void Awake()
     {
         OriginalPosition = transform.position;
-        if(!isOn)
+        if (!isOn)
         {
             _outline.gameObject.SetActive(false);
         }
@@ -22,9 +23,9 @@ public class PickableItem : MonoBehaviour
 
     public void Drop()
     {
-        if(_inCollider)
+        if (_inCollider)
         {
-            //Play Sequence
+            SequenceManager.Instance.PlaySequence(_dialogueGroup, gameObject);
         }
         else
         {
@@ -51,7 +52,7 @@ public class PickableItem : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Client"))
+        if (collision.CompareTag("Client"))
         {
             _inCollider = true;
         }
@@ -59,9 +60,9 @@ public class PickableItem : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if(_inCollider)
+        if (_inCollider)
         {
-            if(collision.CompareTag("Client"))
+            if (collision.CompareTag("Client"))
             {
                 _inCollider = false;
             }
