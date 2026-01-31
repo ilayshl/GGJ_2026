@@ -54,6 +54,7 @@ public class PickableItem : MonoBehaviour
     {
         if (collision.CompareTag("Client"))
         {
+            Debug.Log("Client entered pickable item");
             _inCollider = true;
         }
     }
@@ -64,6 +65,8 @@ public class PickableItem : MonoBehaviour
         {
             if (collision.CompareTag("Client"))
             {
+                Debug.Log("Client exit pickable item");
+
                 _inCollider = false;
             }
         }
