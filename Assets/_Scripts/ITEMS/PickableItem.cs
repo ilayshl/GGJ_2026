@@ -1,3 +1,4 @@
+using _Scripts;
 using UnityEngine;
 
 public class PickableItem : MonoBehaviour
@@ -6,6 +7,7 @@ public class PickableItem : MonoBehaviour
     public ItemType type;
 
     [SerializeField] private SpriteRenderer _outline;
+    private bool _inCollider = false;
     
     public Vector3 OriginalPosition { get; private set; }
 
@@ -18,6 +20,18 @@ public class PickableItem : MonoBehaviour
         }
     }
 
+    public void Drop()
+    {
+        if(_inCollider)
+        {
+            //Play Sequence
+        }
+        else
+        {
+            ReturnToOrigin();
+        }
+    }
+
     public void ReturnToOrigin()
     {
         transform.position = OriginalPosition;
@@ -27,5 +41,24 @@ public class PickableItem : MonoBehaviour
     {
         isOn = !isOn;
         _outline.gameObject.SetActive(!_outline.gameObject.activeSelf);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Client"))
+        {
+            _inCollider = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if(_inCollider)
+        {
+            if(collision.CompareTag("Client"))
+            {
+                _inCollider = false;
+            }
+        }
     }
 }
