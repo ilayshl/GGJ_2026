@@ -28,6 +28,7 @@ public class PickableItem : MonoBehaviour
         }
         else
         {
+            ToggleOutline();
             ReturnToOrigin();
         }
     }
@@ -40,6 +41,11 @@ public class PickableItem : MonoBehaviour
     public void TogglePickable()
     {
         isOn = !isOn;
+        ToggleOutline();
+    }
+
+    public void ToggleOutline()
+    {
         _outline.gameObject.SetActive(!_outline.gameObject.activeSelf);
     }
 

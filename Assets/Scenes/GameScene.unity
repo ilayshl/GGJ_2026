@@ -350,7 +350,7 @@ Transform:
   m_GameObject: {fileID: 172161691}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.41, y: 1.83, z: 0}
+  m_LocalPosition: {x: -5.43, y: 1.91, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2864,8 +2864,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickableItemLocation
   isOn: 0
-  type: 0
-  _outline: {fileID: 0}
+  type: 4
+  _outline: {fileID: 2077769843}
 --- !u!212 &1326356713
 SpriteRenderer:
   serializedVersion: 2
@@ -2953,7 +2953,7 @@ Transform:
   m_GameObject: {fileID: 1471484750}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.89, y: 0.38, z: 0}
+  m_LocalPosition: {x: -4.59, y: 0.36, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3387,7 +3387,7 @@ GameObject:
   - component: {fileID: 2077769842}
   - component: {fileID: 2077769841}
   m_Layer: 0
-  m_Name: HairBrush (1)
+  m_Name: HairBrushOutline
   m_TagString: Pick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
