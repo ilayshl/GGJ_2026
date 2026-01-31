@@ -16,9 +16,4 @@ MonoBehaviour:
   description: Auto-generated group for 'Sponge drying her face' category
   autoPopulateFromCategory: 1
   dialogues:
-  - {fileID: 11400000, guid: afbafe78c780a874f99a68ba581e1942, type: 2}
-  - {fileID: 11400000, guid: 54ac3ff8f22eeb74f8750a63fb598428, type: 2}
-  - {fileID: 11400000, guid: fafee511b9886bf4e9f23c609fe1992b, type: 2}
-  - {fileID: 11400000, guid: fe3f5b229ab6dc24a9edf120e7a9c35e, type: 2}
-  - {fileID: 11400000, guid: 619c27e2c92ffbd4ebe34150339edd09, type: 2}
   - {fileID: 11400000, guid: 2e29a79613a34da439b0dda44a5f4994, type: 2}

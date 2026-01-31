@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d96e82d15c04fd1438007c61d953212c, type: 3}
-  m_Name: 4.1
+  m_Name: 3.6
   m_EditorClassIdentifier: Assembly-CSharp::_Scripts.DialogData
-  title: 4.1
-  groupName: Sponge drying her face
-  sortingNumber: 16
-  characterName: Esthetician
-  dialogText: "I\u2019m glad."
+  title: 3.6
+  groupName: Towel
+  sortingNumber: 15
+  characterName: Client
+  dialogText: "Oh\u2014thanks. My husband got them for me."
   displayDuration: 3
   typingSpeedOverride: -1
   dialogueVoiceLine: {fileID: 0}

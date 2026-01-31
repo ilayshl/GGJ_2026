@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 987db11c13f9a6d4e80c4317195add54, type: 3}
-  m_Name: Default_Group
+  m_Name: Sponge_Group
   m_EditorClassIdentifier: Assembly-CSharp::_Scripts.DialogueGroup
-  groupName: Default
-  description: Auto-generated group for 'Default' category
+  groupName: Sponge
+  description: Auto-generated group for 'Sponge' category
   autoPopulateFromCategory: 1
   dialogues:
-  - {fileID: 11400000, guid: 8369c20c32522d04ab470d6c1223439a, type: 2}
+  - {fileID: 11400000, guid: 76a47b0e6e1855c4a810146914531170, type: 2}
