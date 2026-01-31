@@ -613,7 +613,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &321109884
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1076,7 +1076,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -609, y: 319}
+  m_AnchoredPosition: {x: -703, y: 379}
   m_SizeDelta: {x: 107.48, y: 101.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &443568653
@@ -1299,7 +1299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28, y: -6.29}
+  m_AnchoredPosition: {x: -63, y: -6.29}
   m_SizeDelta: {x: 986.36, y: 795.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &632913052
@@ -1340,6 +1340,9 @@ MonoBehaviour:
 
 
     Maria Berdnikov - Art
+
+
+    Aviel Fachler - Sound Design
 
 
 '
@@ -1408,7 +1411,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 23.862808, z: -256.59262, w: 0}
+  m_margin: {x: -76.964264, y: 23.862808, z: -356.3621, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
