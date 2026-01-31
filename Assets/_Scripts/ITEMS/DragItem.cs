@@ -9,7 +9,7 @@ public class DragItem : MonoBehaviour
     public Vector2 cursorHotSpot = Vector2.zero;
     public CursorMode cursorMode = CursorMode.Auto;
     [SerializeField] private Camera cam;
-    private PickableItem pickedObject;
+    [SerializeField] private PickableItem pickedObject;
     private Vector3 offset;
     private bool isHeld;
 
@@ -24,7 +24,6 @@ public class DragItem : MonoBehaviour
         Vector3 mouseScreenPos = Mouse.current.position.ReadValue();
         Vector3 mouseWorldPos = cam.ScreenToWorldPoint(mouseScreenPos);
         mouseWorldPos.z = 0f;
-
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
@@ -59,6 +58,7 @@ public class DragItem : MonoBehaviour
                 }
                 pickedObject.Drop();
                 _fakeCursor.SetCursor(1);
+                pickedObject = null;
             }
 
         }
@@ -66,7 +66,6 @@ public class DragItem : MonoBehaviour
         if (isHeld)
         {
             pickedObject.transform.position = (Vector3)mouseWorldPos + offset;
-
         }
     }
 }
