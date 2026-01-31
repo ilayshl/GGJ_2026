@@ -29,6 +29,7 @@ public class FakeCursor : MonoBehaviour
         );
         
         GlitchOn.Instance.PlayGlitch(4f);
+        PlantController.Instance.SwitchPlant(3);
     }
 
 

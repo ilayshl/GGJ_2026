@@ -733,7 +733,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2923702535043288740, guid: c1afc51ce1489644b90f055e80fa70b8, type: 3}
+  m_Sprite: {fileID: -2923702535043288740, guid: f2de7521e3bfae345a19786b67d90b02, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2219,6 +2219,7 @@ MonoBehaviour:
   cursorHotSpot: {x: 0, y: 0}
   cursorMode: 0
   cam: {fileID: 1319971251}
+  pickedObject: {fileID: 0}
   isHeld: 0
 --- !u!114 &1319971255
 MonoBehaviour:
@@ -2799,6 +2800,54 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1671260891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1671260893}
+  - component: {fileID: 1671260892}
+  m_Layer: 0
+  m_Name: PlantController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1671260892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671260891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e63b47e1000c64e80fd0a165ceb40c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlantController
+  Plant1: {fileID: -9017859140913542548, guid: 635afcc2087603048a00f7ec921d1c7b, type: 3}
+  Plant2: {fileID: -5714028698842266910, guid: b47f3c60c7c84fc449a4397e681137dc, type: 3}
+  Plant3: {fileID: -5714028698842266910, guid: b47f3c60c7c84fc449a4397e681137dc, type: 3}
+  sr: {fileID: 361904920}
+--- !u!4 &1671260893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671260891}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.83615, y: 0.61481, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1697929171
 GameObject:
   m_ObjectHideFlags: 0
@@ -3812,3 +3861,4 @@ SceneRoots:
   - {fileID: 1408775065}
   - {fileID: 1770574999}
   - {fileID: 493723576}
+  - {fileID: 1671260893}

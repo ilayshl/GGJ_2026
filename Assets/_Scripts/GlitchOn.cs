@@ -5,16 +5,6 @@ public class GlitchOn : MonoBehaviour
 {
     public static GlitchOn Instance;
     
-    private bool isGlitchOn;
-    private float timeOfGlitch;
-
-
-    public void setGlitchOn(float num)
-    {
-        isGlitchOn = true;
-        timeOfGlitch = num;
-    }
-    
     [Header("Glitch Visual")]
     [SerializeField] private GameObject glitchImage;
     
