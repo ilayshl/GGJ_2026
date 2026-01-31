@@ -18,7 +18,7 @@ public class FlipSprite : MonoBehaviour
 
     public void Update()
     {
-        if (_drag.isHeld)
+        if (_drag.isHeld && _drag.pickedObject == this)
         {
             sr.sprite = Onhand;
         }
