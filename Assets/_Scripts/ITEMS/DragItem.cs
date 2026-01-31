@@ -20,7 +20,7 @@ public class DragItem : MonoBehaviour
 
     void Update()
     {
-       
+
         Vector3 mouseScreenPos = Mouse.current.position.ReadValue();
         Vector3 mouseWorldPos = cam.ScreenToWorldPoint(mouseScreenPos);
         mouseWorldPos.z = 0f;
@@ -29,36 +29,44 @@ public class DragItem : MonoBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero);
-            Debug.Log("casting ray");
-            _fakeCursor.SetCursor(2);
-          
+
             if (hit.collider && hit.collider.CompareTag("Pick"))
             {
-                Debug.Log("picked item");
-                
-                pickedObject= hit.collider.GetComponent<PickableItem>();
-                offset = pickedObject.transform.position - (Vector3)mouseWorldPos;
-                isHeld = true;
+                pickedObject = hit.collider.GetComponent<PickableItem>();
+                if (pickedObject.isOn)
+                {
+                    pickedObject.ToggleOutline();
+                    _fakeCursor.SetCursor(2);
+                    offset = pickedObject.transform.position - (Vector3)mouseWorldPos;
+                    isHeld = true;
+                }
+                else
+                {
+                    pickedObject = null;
+                }
             }
-            
+
         }
         else if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
-            isHeld = false;
-            if (pickedObject == null)
+            if (pickedObject != null)
             {
+                isHeld = false;
+                if (pickedObject == null)
+                {
+                    _fakeCursor.SetCursor(1);
+                    return;
+                }
+                pickedObject.Drop();
                 _fakeCursor.SetCursor(1);
-                return;
             }
-            pickedObject.ReturnToOrigin();
-            _fakeCursor.SetCursor(1);
-                
+
         }
 
         if (isHeld)
         {
             pickedObject.transform.position = (Vector3)mouseWorldPos + offset;
-            
+
         }
     }
 }
