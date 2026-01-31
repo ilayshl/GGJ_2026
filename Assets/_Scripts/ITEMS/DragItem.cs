@@ -9,7 +9,7 @@ public class DragItem : MonoBehaviour
     public Vector2 cursorHotSpot = Vector2.zero;
     public CursorMode cursorMode = CursorMode.Auto;
     [SerializeField] private Camera cam;
-    [SerializeField] private PickableItem pickedObject;
+    public PickableItem pickedObject;
     private Vector3 offset;
     public bool isHeld;
 

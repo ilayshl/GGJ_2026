@@ -47,7 +47,7 @@ public class PickableItem : MonoBehaviour
 
     public void ToggleOutline()
     {
-        _outline.gameObject.SetActive(!_outline.gameObject.activeSelf);
+        _outline.gameObject.SetActive(isOn);
     }
 
     void OnTriggerEnter2D(Collider2D collision)

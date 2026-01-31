@@ -13,17 +13,18 @@ public class ItemsOrderManager : MonoBehaviour
         {
             ItemsOrder.Enqueue(item);
         }
-        EnableItem();
+        
     }
 
+    void Start()
+    {
+        EnableItem();
+    }
 
     public void EnableItem()
     {
         var currentItem = ItemsOrder.Dequeue();
-        if(currentItem.TryGetComponent<PickableItem>(out var pickable))
-        {
-            pickable.TogglePickable();
-        }
+            currentItem.TogglePickable();
     }
 
 }
