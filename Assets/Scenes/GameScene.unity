@@ -1411,7 +1411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LightButton
   CanActivate: 1
-  brokenLight: {fileID: 0}
+  brokenLight: {fileID: -8621676648381802245, guid: f826296ed4f27d741bba9033531e37a0, type: 3}
 --- !u!1 &1212448618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2014,8 +2014,8 @@ MonoBehaviour:
   masked: {fileID: 21300000, guid: 5568ccbe5ae89f94d9c4b51e2554edb9, type: 3}
   bloody: {fileID: 21300000, guid: cb99bb00df0ec1c448d9bc62772f0ebc, type: 3}
   bruised: {fileID: -1586527195254546623, guid: cfe702b621bc41449a4067a540334fae, type: 3}
-  maskedHalfPulledBloody: {fileID: 0}
-  maskedHalfPulledNormal: {fileID: 0}
+  maskedHalfPulledBloody: {fileID: 1302723820812287101, guid: be352825d1adf4003a6aee881960f50b, type: 3}
+  maskedHalfPulledNormal: {fileID: 3356837773014537050, guid: 83d2273403dee400f9915bb9ac23cc69, type: 3}
 --- !u!1 &1780657173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2136,6 +2136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a2dc317b7cfb49ba94f8d81b55789e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  finalGroup: {fileID: 11400000, guid: fdb6df4f80b7fd04ea92045569b3fea3, type: 2}
 --- !u!4 &1795256155
 Transform:
   m_ObjectHideFlags: 0

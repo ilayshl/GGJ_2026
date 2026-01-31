@@ -12,7 +12,7 @@ using UnityEngine.InputSystem;
 public class DialogueManager : MonoBehaviour
 {
     // Events
-    public static event Action<string> OnDialogueEvent;
+    //public static event Action<string> OnDialogueEvent;
     public static event Action<DialogData> OnDialogueStart;
     public static event Action<DialogData> OnDialogueComplete;
     public static event Action OnQueueComplete;

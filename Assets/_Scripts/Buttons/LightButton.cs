@@ -19,7 +19,7 @@ public class LightButton : MonoBehaviour
         else
         {
             GetComponent<Image>().sprite = brokenLight;
-            _button.interactable = false;
+            GetComponent<Button>().interactable = false;
         }
     }
 

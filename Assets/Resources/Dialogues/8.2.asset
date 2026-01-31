@@ -16,7 +16,7 @@ MonoBehaviour:
   groupName: Place the face mask
   sortingNumber: 37
   characterName: Esthetician
-  dialogText: How are things with your boyfriend?
+  dialogText: How are things with your husband?
   displayDuration: 3
   typingSpeedOverride: -1
   dialogueVoiceLine: {fileID: 0}
@@ -24,3 +24,4 @@ MonoBehaviour:
   playTypingSound: 1
   animationType: 1
   characterNameColor: {r: 1, g: 1, b: 1, a: 1}
+  glitch: 0
