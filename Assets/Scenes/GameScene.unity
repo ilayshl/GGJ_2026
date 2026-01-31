@@ -2090,6 +2090,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1593471717}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1795256153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1795256155}
+  - component: {fileID: 1795256154}
+  m_Layer: 0
+  m_Name: Glitch Catcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1795256154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795256153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a2dc317b7cfb49ba94f8d81b55789e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!4 &1795256155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795256153}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.1839, y: 2.0104, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1875634746
 GameObject:
   m_ObjectHideFlags: 0
@@ -2437,6 +2481,10 @@ PrefabInstance:
       value: -2.08
       objectReference: {fileID: 0}
     - target: {fileID: 5617710592888596598, guid: e03f0cf71f6e6462fb623ff721da25fb, type: 3}
+      propertyPath: _dialogueGroup
+      value: 
+      objectReference: {fileID: 11400000, guid: cc57a41866820c5428c28b18fa8306d3, type: 2}
+    - target: {fileID: 5617710592888596598, guid: e03f0cf71f6e6462fb623ff721da25fb, type: 3}
       propertyPath: animationObject
       value: 
       objectReference: {fileID: 503277684081643728, guid: 8eb5d362b976e414f8a9c2086aa008f5, type: 3}
@@ -2650,3 +2698,4 @@ SceneRoots:
   - {fileID: 140950122}
   - {fileID: 814926146}
   - {fileID: 2142010879}
+  - {fileID: 1795256155}

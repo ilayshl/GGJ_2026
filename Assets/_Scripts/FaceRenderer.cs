@@ -33,6 +33,11 @@ public class FaceRenderer : MonoBehaviour
         sr.sprite = bloody;
     }
 
+    public void SetBruised()
+    {
+        sr.sprite = bruised;
+    }
+
     public void SetHalfMaskedBloody()
     {
         sr.sprite = maskedHalfPulledBloody;

@@ -369,6 +369,7 @@ public class DialogueManager : MonoBehaviour
             if (dialogData.glitch)
             {
                 OnDialogueEndGlitch?.Invoke();
+                Debug.Log("[DialogueManager] Invoked");
             }
 
             _isTyping = false;

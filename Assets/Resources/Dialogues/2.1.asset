@@ -24,7 +24,4 @@ MonoBehaviour:
   playTypingSound: 1
   animationType: 1
   characterNameColor: {r: 1, g: 1, b: 1, a: 1}
-  triggerEventOnStart: 0
-  eventNameOnStart: 
-  triggerEventOnComplete: 0
-  eventNameOnComplete: 
+  glitch: 0
