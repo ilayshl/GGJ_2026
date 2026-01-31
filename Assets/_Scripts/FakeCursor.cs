@@ -27,6 +27,8 @@ public class FakeCursor : MonoBehaviour
             pivot.x - 10,
             -300
         );
+        
+        GlitchOn.Instance.PlayGlitch(4f);
     }
 
 
