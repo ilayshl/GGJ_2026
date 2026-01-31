@@ -27,8 +27,8 @@ public class PickableItem : MonoBehaviour
         if (_inCollider)
         {
             Instantiate(animationObject);
+            SequenceManager.Instance.PlaySequence(_dialogueGroup, this.gameObject);
             gameObject.SetActive(false);
-            SequenceManager.Instance.PlaySequence(_dialogueGroup, gameObject);
         }
         else
         {
