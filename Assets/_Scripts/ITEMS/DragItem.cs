@@ -11,7 +11,7 @@ public class DragItem : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private PickableItem pickedObject;
     private Vector3 offset;
-    private bool isHeld;
+    public bool isHeld;
 
     private void Start()
     {
