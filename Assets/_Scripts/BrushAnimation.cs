@@ -11,4 +11,9 @@ public class BrushAnimation : MonoBehaviour
     {
         FindFirstObjectByType<FaceRenderer>().SetSoapy();
     }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
+    }
 }
