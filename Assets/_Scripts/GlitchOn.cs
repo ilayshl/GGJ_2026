@@ -4,10 +4,10 @@ using UnityEngine;
 public class GlitchOn : MonoBehaviour
 {
     public static GlitchOn Instance;
-    
-    [Header("Glitch Visual")]
-    [SerializeField] private GameObject glitchImage;
-    
+
+    [Header("Glitch Visual")] [SerializeField]
+    private GameObject glitchImage;
+
     private Coroutine glitchRoutine;
 
     private void Awake()
@@ -24,7 +24,7 @@ public class GlitchOn : MonoBehaviour
         glitchImage.SetActive(false);
     }
 
-    public void PlayGlitch(float duration)
+    public void PlayGlitch(float duration = 0.3f)
     {
         if (glitchRoutine != null)
             StopCoroutine(glitchRoutine);

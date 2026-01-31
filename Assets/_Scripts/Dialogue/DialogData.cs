@@ -33,7 +33,8 @@ namespace _Scripts
         [Header("Visual Effects")]
         public DialogAnimationType animationType = DialogAnimationType.FadeIn;
         public Color characterNameColor = Color.white;
-        
+        public bool glitch = false;
+
     }
     
     public enum DialogAnimationType

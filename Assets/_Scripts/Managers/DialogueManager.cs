@@ -17,6 +17,8 @@ public class DialogueManager : MonoBehaviour
     public static event Action<DialogData> OnDialogueComplete;
     public static event Action OnQueueComplete;
 
+    public static event Action OnDialogueEndGlitch;
+
     [Header("Dialogue Database")] [SerializeField]
     private List<DialogData> allDialogues = new List<DialogData>();
 
@@ -40,9 +42,6 @@ public class DialogueManager : MonoBehaviour
     private bool useDialogueAudio = true;
 
     [SerializeField] private float typingSoundInterval = 0.1f; // Play typing sound every X seconds
-
-    [Header("Continue Indicator")] [SerializeField]
-    private GameObject continueIndicator;
 
     [SerializeField] private bool autoHideAfterDuration = true;
 
@@ -104,10 +103,6 @@ public class DialogueManager : MonoBehaviour
             dialoguePanel.SetActive(false);
         }
 
-        if (continueIndicator != null)
-        {
-            continueIndicator.SetActive(false);
-        }
 
         // Load all DialogData from Resources if not manually assigned
         if (allDialogues.Count == 0)
@@ -192,38 +187,37 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    
 
     public void ClearQueue()
     {
         // Store current dialog before clearing
         DialogData currentDialog = _currentDialog;
-        
+
         // Stop current typing coroutine if running
         if (_currentTypingCoroutine != null)
         {
             StopCoroutine(_currentTypingCoroutine);
             _currentTypingCoroutine = null;
         }
-        
+
         // Clear the queue
         _dialogueQueue.Clear();
-        
+
         // Ensure completion event fires for current dialog
         if (currentDialog != null)
         {
             OnDialogueComplete?.Invoke(currentDialog);
         }
-        
+
         // Mark queue as not playing
         _isPlayingQueue = false;
-        
+
         // Fire queue complete event
         OnQueueComplete?.Invoke();
-        
+
         // Hide dialogue
         HideDialogue();
-        
+
         Debug.Log("Dialogue queue cleared - all events invoked");
     }
 
@@ -272,7 +266,6 @@ public class DialogueManager : MonoBehaviour
     {
         _isPlayingQueue = true;
 
-        Debug.Log("lenght of queue:" + _dialogueQueue.Count);
         while (_dialogueQueue.Count > 0)
         {
             DialogData nextDialog = _dialogueQueue.Dequeue();
@@ -287,9 +280,8 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        ClearQueue();
-        // _isPlayingQueue = false;
-        // OnQueueComplete?.Invoke();
+        _isPlayingQueue = false;
+        OnQueueComplete?.Invoke();
     }
 
     #endregion
@@ -300,10 +292,10 @@ public class DialogueManager : MonoBehaviour
     {
         _currentDialog = dialogData;
         bool completedNaturally = false;
-        
-        
+
+
         OnDialogueStart?.Invoke(dialogData);
-        
+
         try
         {
             // Show and animate dialogue panel
@@ -312,35 +304,35 @@ public class DialogueManager : MonoBehaviour
                 dialoguePanel.SetActive(true);
                 yield return AnimateDialoguePanel(dialogData.animationType, true);
             }
-            
+
             // Set character name
             if (characterNameText != null)
             {
                 characterNameText.text = dialogData.characterName;
                 characterNameText.color = dialogData.characterNameColor;
             }
-            
+
             // Play voice line if available
             if (useDialogueAudio && dialogData.dialogueVoiceLine != null)
             {
                 AudioManager.Play(SoundType.Dialogue, dialogData.dialogueVoiceLine);
             }
-            
+
             // Clear text and prepare for typing
             if (dialogueText != null)
             {
                 dialogueText.text = "";
             }
-            
+
             _isTyping = true;
             _skipRequested = false;
             _lastTypingSoundTime = 0f;
-            
+
             string fullText = dialogData.dialogText;
-            float typingSpeed = dialogData.typingSpeedOverride > 0 
-                ? dialogData.typingSpeedOverride 
+            float typingSpeed = dialogData.typingSpeedOverride > 0
+                ? dialogData.typingSpeedOverride
                 : defaultTypingSpeed;
-            
+
             // Type out each character
             for (int i = 0; i < fullText.Length; i++)
             {
@@ -350,10 +342,10 @@ public class DialogueManager : MonoBehaviour
                     dialogueText.text = fullText;
                     break;
                 }
-                
+
                 char currentChar = fullText[i];
                 dialogueText.text += currentChar;
-                
+
                 // Play typing sound
                 if (dialogData.playTypingSound && dialogData.typingSoundEffect != null)
                 {
@@ -363,37 +355,37 @@ public class DialogueManager : MonoBehaviour
                         _lastTypingSoundTime = Time.time;
                     }
                 }
-                
+
                 // Add extra delay for punctuation
                 float delay = typingSpeed;
                 if (currentChar == '.' || currentChar == ',' || currentChar == '!' || currentChar == '?')
                 {
                     delay += punctuationDelay;
                 }
-                
+
                 yield return new WaitForSeconds(delay);
             }
-            
-            _isTyping = false;
-            
-            // Show continue indicator
-            if (continueIndicator != null)
+
+            if (dialogData.glitch)
             {
-                continueIndicator.SetActive(true);
+                OnDialogueEndGlitch?.Invoke();
             }
-            
+
+            _isTyping = false;
+
+
             // Wait for player input or auto-continue
             if (autoHideAfterDuration)
             {
                 _waitingForInput = true;
                 float timer = 0f;
-                
+
                 while (timer < dialogData.displayDuration && _waitingForInput)
                 {
                     timer += Time.deltaTime;
                     yield return null;
                 }
-                
+
                 _waitingForInput = false;
             }
             else
@@ -401,35 +393,30 @@ public class DialogueManager : MonoBehaviour
                 _waitingForInput = true;
                 yield return new WaitUntil(() => !_waitingForInput);
             }
-            
-            // Hide continue indicator
-            if (continueIndicator != null)
-            {
-                continueIndicator.SetActive(false);
-            }
-            
+
+
             completedNaturally = true;
         }
         finally
         {
             // This block ALWAYS executes, even if coroutine is stopped
-            
+
             // Clean up state
             _isTyping = false;
             _waitingForInput = false;
-            
+
             OnDialogueComplete?.Invoke(dialogData);
-            
+
             // Hide dialogue panel if this is the last in queue
             if (_dialogueQueue.Count == 0)
             {
                 StartCoroutine(HideDialoguePanelCoroutine(dialogData.animationType));
             }
-            
+
             _currentDialog = null;
         }
     }
-    
+
     private IEnumerator HideDialoguePanelCoroutine(DialogAnimationType animType)
     {
         yield return AnimateDialoguePanel(animType, false);
@@ -452,29 +439,23 @@ public class DialogueManager : MonoBehaviour
     {
         // Store current dialog before clearing
         DialogData dialogToComplete = _currentDialog;
-        
+
         if (dialoguePanel != null)
         {
             dialoguePanel.SetActive(false);
         }
-        
+
         if (dialogueText != null)
         {
             dialogueText.text = "";
         }
-        
-        if (continueIndicator != null)
-        {
-            continueIndicator.SetActive(false);
-        }
-        
+
         // If there was a current dialog and events haven't fired yet, fire them now
         if (dialogToComplete != null && _isTyping)
         {
-           
             OnDialogueComplete?.Invoke(dialogToComplete);
         }
-        
+
         _currentDialog = null;
         _isTyping = false;
         _waitingForInput = false;
@@ -498,9 +479,9 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator AnimateDialoguePanel(DialogAnimationType animType, bool show)
     {
         if (dialoguePanelCanvasGroup == null) yield break;
-        
+
         RectTransform panelRect = dialoguePanel.GetComponent<RectTransform>();
-        
+
         switch (animType)
         {
             case DialogAnimationType.FadeIn:
@@ -513,8 +494,9 @@ public class DialogueManager : MonoBehaviour
                 {
                     dialoguePanelCanvasGroup.DOFade(0f, animationDuration);
                 }
+
                 break;
-                
+
             case DialogAnimationType.SlideFromBottom:
                 if (show)
                 {
@@ -526,8 +508,9 @@ public class DialogueManager : MonoBehaviour
                 {
                     panelRect.DOAnchorPosY(panelRect.anchoredPosition.y - 300f, animationDuration).SetEase(Ease.InBack);
                 }
+
                 break;
-                
+
             case DialogAnimationType.Pop:
                 if (show)
                 {
@@ -538,15 +521,16 @@ public class DialogueManager : MonoBehaviour
                 {
                     dialoguePanel.transform.DOScale(Vector3.zero, animationDuration).SetEase(Ease.InBack);
                 }
+
                 break;
         }
-        
+
         yield return new WaitForSeconds(animationDuration);
     }
-    
+
     #endregion
 
-    
+
     public void SkipTyping()
     {
         if (_isTyping && canSkipTyping)
@@ -554,15 +538,14 @@ public class DialogueManager : MonoBehaviour
             _skipRequested = true;
         }
     }
-    
-    
+
+
     private void Update()
     {
         if (Keyboard.current.spaceKey.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame)
         {
             AdvanceDialogue();
         }
-        
     }
 
 
