@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 3.4
   m_EditorClassIdentifier: Assembly-CSharp::_Scripts.DialogData
   title: 3.4
-  groupName: Sponge in water bowl (hover)
-  sortingNumber: 14
+  groupName: Towel
+  sortingNumber: 13
   characterName: Esthetician
   dialogText: "Makes sense. It\u2019s good to keep routines."
   displayDuration: 3

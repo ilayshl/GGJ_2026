@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 3.1
   m_EditorClassIdentifier: Assembly-CSharp::_Scripts.DialogData
   title: 3.1
-  groupName: Sponge in water bowl (hover)
+  groupName: Towel
   sortingNumber: 10
   characterName: Client
   dialogText: Okay.

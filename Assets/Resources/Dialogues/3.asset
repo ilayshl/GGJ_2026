@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 3
   m_EditorClassIdentifier: Assembly-CSharp::_Scripts.DialogData
   title: 3
-  groupName: Sponge in water bowl (hover)
+  groupName: Towel
   sortingNumber: 9
   characterName: Esthetician
-  dialogText: "Let me know if the water\u2019s too warm.\r\n"
+  dialogText: "Let me know if the water\u2019s too warm."
   displayDuration: 3
   typingSpeedOverride: -1
   dialogueVoiceLine: {fileID: 0}
