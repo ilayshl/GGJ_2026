@@ -1742,6 +1742,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 140950122}
     m_Modifications:
+    - target: {fileID: 729613740113533977, guid: 4b2b737571524c24fbb99813d6df9d0d, type: 3}
+      propertyPath: _dialogueGroup
+      value: 
+      objectReference: {fileID: 11400000, guid: 6cf3019a92d27254e9584c116fddd9e6, type: 2}
     - target: {fileID: 4542001796040335518, guid: 4b2b737571524c24fbb99813d6df9d0d, type: 3}
       propertyPath: _drag
       value: 
@@ -1800,6 +1804,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8935435981838158277, guid: 4b2b737571524c24fbb99813d6df9d0d, type: 3}
   m_PrefabInstance: {fileID: 1418880358}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1418880360 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 729613740113533977, guid: 4b2b737571524c24fbb99813d6df9d0d, type: 3}
+  m_PrefabInstance: {fileID: 1418880358}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d14bbbcbd051bc4d9820f0ff101c234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickableItemLocation
 --- !u!1 &1593471716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1879,7 +1894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemsOrderManager
   itemsArray:
   - {fileID: 8150396991925603039}
-  - {fileID: 0}
+  - {fileID: 1418880360}
   - {fileID: 265413575196105663}
   - {fileID: 8987906028620143634}
   - {fileID: 7291998731902772388}

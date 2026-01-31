@@ -32,11 +32,8 @@ public class SequenceManager : MonoBehaviour
     }
 
 
-    public void PlaySequence(DialogueGroup groupSequence, GameObject item)
+    public void PlaySequence(DialogueGroup groupSequence)
     {
-        // Animator animator = item.GetComponent<Animator>();
-        // animator.SetTrigger(groupSequence.groupName);
-
         
         Debug.Log($"Playing sequence '{groupSequence.groupName}'");
         DialogueManager.Instance.PlayDialogueGroup(groupSequence);
