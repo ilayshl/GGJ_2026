@@ -169,6 +169,7 @@ MonoBehaviour:
   isOn: 0
   type: 4
   _outline: {fileID: 85578425}
+  _dialogueGroup: {fileID: 0}
 --- !u!212 &60137534
 SpriteRenderer:
   serializedVersion: 2
@@ -777,6 +778,7 @@ MonoBehaviour:
   isOn: 0
   type: 2
   _outline: {fileID: 363086055}
+  _dialogueGroup: {fileID: 0}
 --- !u!1 &231521666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,6 +1016,7 @@ MonoBehaviour:
   isOn: 0
   type: 3
   _outline: {fileID: 1235953811}
+  _dialogueGroup: {fileID: 0}
 --- !u!1 &297341150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,7 +1165,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2923702535043288740, guid: c1afc51ce1489644b90f055e80fa70b8, type: 3}
+  m_Sprite: {fileID: -2923702535043288740, guid: f2de7521e3bfae345a19786b67d90b02, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1437,6 +1440,97 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &412895847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 412895849}
+  - component: {fileID: 412895848}
+  m_Layer: 0
+  m_Name: GlitchScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!212 &412895848
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412895847}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 51323ce598ffde94aaabba10d4029a44, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 32767
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!4 &412895849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412895847}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.14, y: -0.0092699, z: 0}
+  m_LocalScale: {x: 26.23, y: 10.49, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &419916436
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,6 +2367,7 @@ MonoBehaviour:
   isOn: 0
   type: 5
   _outline: {fileID: 521219129}
+  _dialogueGroup: {fileID: 0}
 --- !u!1 &950508655
 GameObject:
   m_ObjectHideFlags: 0
@@ -2420,6 +2515,7 @@ MonoBehaviour:
   isOn: 0
   type: 0
   _outline: {fileID: 363610236}
+  _dialogueGroup: {fileID: 0}
 --- !u!95 &950508660
 Animator:
   serializedVersion: 7
@@ -2680,6 +2776,99 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LightButton
   CanActivate: 1
   brokenLight: {fileID: 0}
+--- !u!1 &1185273719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1185273721}
+  - component: {fileID: 1185273720}
+  m_Layer: 0
+  m_Name: GlitchController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1185273720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185273719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760d91a488ce3264998b0fa3c18efb80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GlitchOn
+  glitchImage: {fileID: 412895847}
+--- !u!4 &1185273721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185273719}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.97806, y: -0.00927, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1201885408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1201885410}
+  - component: {fileID: 1201885409}
+  m_Layer: 0
+  m_Name: PlantController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1201885409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201885408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e63b47e1000c64e80fd0a165ceb40c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlantController
+  Plant1: {fileID: -9017859140913542548, guid: 635afcc2087603048a00f7ec921d1c7b, type: 3}
+  Plant2: {fileID: -5714028698842266910, guid: b47f3c60c7c84fc449a4397e681137dc, type: 3}
+  Plant3: {fileID: -5714028698842266910, guid: b47f3c60c7c84fc449a4397e681137dc, type: 3}
+  sr: {fileID: 361904920}
+--- !u!4 &1201885410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201885408}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.83615, y: 0.61481, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1212448618
 GameObject:
   m_ObjectHideFlags: 0
@@ -3130,6 +3319,8 @@ MonoBehaviour:
   cursorHotSpot: {x: 0, y: 0}
   cursorMode: 0
   cam: {fileID: 1319971251}
+  pickedObject: {fileID: 0}
+  isHeld: 0
 --- !u!114 &1319971255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3292,6 +3483,7 @@ MonoBehaviour:
   isOn: 0
   type: 1
   _outline: {fileID: 89914763}
+  _dialogueGroup: {fileID: 0}
 --- !u!1 &1593471716
 GameObject:
   m_ObjectHideFlags: 0
@@ -3682,3 +3874,6 @@ SceneRoots:
   - {fileID: 1875634747}
   - {fileID: 140950122}
   - {fileID: 814926146}
+  - {fileID: 1185273721}
+  - {fileID: 1201885410}
+  - {fileID: 412895849}
