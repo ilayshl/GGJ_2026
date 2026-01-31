@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1615169426336173414}
   - component: {fileID: 2764497605206685109}
   - component: {fileID: 796805425551999914}
-  - component: {fileID: 6092936493418253516}
   m_Layer: 0
   m_Name: Brush
   m_TagString: Pick
@@ -148,28 +147,7 @@ MonoBehaviour:
   type: 0
   _outline: {fileID: 4403443915864521787}
   _dialogueGroup: {fileID: 11400000, guid: d375d8102ca8f2744b46b0bd021aef5d, type: 2}
---- !u!95 &6092936493418253516
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2449540972198004191}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 042e3931c9b254b72b2e419a3df11bf6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  animationObject: {fileID: 7965537901665680698, guid: 01ad246666bc04c9dace553725516144, type: 3}
 --- !u!1 &8958876716902494747
 GameObject:
   m_ObjectHideFlags: 0
