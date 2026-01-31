@@ -7,16 +7,14 @@ public class GlitchCatcher : MonoBehaviour
     void Awake()
     {
         _face = FindFirstObjectByType<FaceRenderer>();
-        Debug.Log("GlitchCatcher activated");
     }
 
     void OnEnable()
     {
         DialogueManager.OnDialogueEndGlitch += CatchGlitch;
-        Debug.Log("Subscribed");
     }
 
-    void Start()
+    void OnDisable()
     {
         DialogueManager.OnDialogueEndGlitch -= CatchGlitch;
     }
@@ -28,12 +26,12 @@ public class GlitchCatcher : MonoBehaviour
         AudioManager.ChangeMusic();
         _counter++;
         Debug.Log(_counter);
-        if(_counter == 1)
+        if (_counter == 1 || _counter == 3)
         {
             _face.SetBruised();
         }
 
-        if(_counter == 2)
+        if (_counter == 2 || _counter == 4)
         {
             _face.SetNormal();
         }
