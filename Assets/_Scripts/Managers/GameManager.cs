@@ -1,3 +1,4 @@
+using _Scripts;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,13 +18,8 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("DialogueScene", LoadSceneMode.Additive);
     }
 
-    void Start()
-    {
-        DialogueManager.Instance.EnqueueDialoguesByGroup("Start");
-    }
-
     public static void StartDialogue(string name)
     {
-        DialogueManager.Instance.EnqueueDialogue(name);
+        DialogueManager.Instance.EnqueueDialoguesByGroup(name);
     }
 }
